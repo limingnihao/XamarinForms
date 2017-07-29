@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Community.Views.WelcomePage" Title="欢迎">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+             <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="Margin" Value="0,10,0,0"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="TextColor" Value="#FFFFFF"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>     
+    <ContentPage>
+        <ContentPage.BackgroundImage>Background_1.png</ContentPage.BackgroundImage>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="请往左滑动！！！" Style="{StaticResource labelStyle}"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage>
+        <ContentPage.BackgroundImage>Background_3.png</ContentPage.BackgroundImage>
+        <StackLayout VerticalOptions="EndAndExpand"
+                     HorizontalOptions="FillAndExpand">
+<!--            <Button Text="开始1" Clicked="gotoLoginHandler1" />-->
+            <Button Text="进入" BackgroundColor="#FFA000" TextColor="#ffffff" FontAttributes="Bold" FontSize="20" 
+                    BorderWidth="0" BorderRadius="25" HeightRequest="50" Margin="40,0,40,100" Clicked="gotoLoginHandler2"/>
+        </StackLayout>
+    </ContentPage>
+</CarouselPage>

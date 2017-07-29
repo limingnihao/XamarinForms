@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Community.Views.LoginMainPage"
+    Title="登录">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonQQStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="Image" Value="btn_login_qq.png"/>
+            </Style>
+             <Style x:Key="buttonWXStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="Image" Value="btn_login_wx.png"/>
+                
+            </Style>
+            
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="TextColor" Value="#FFFFFF"/>
+                <Setter Property="WidthRequest" Value="150"/>
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.BackgroundImage>background_login.png</ContentPage.BackgroundImage>
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="20, 100, 20, 20"
+                    Android="20, 80, 20, 20" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand"
+                     Orientation="Vertical"
+                     Spacing="15">
+            <Image Source="xamarin_logo.png" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Center" />
+            
+            <Button x:Name="login_wx" Style="{StaticResource buttonWXStyle}" Margin="0,50,0,0"/>
+
+            <Button x:Name="login_qq" Style="{StaticResource buttonQQStyle}"/>
+
+            <StackLayout VerticalOptions="EndAndExpand"
+                         HorizontalOptions="Center"
+                         Orientation="Horizontal"
+                        >
+                <Button x:Name="login"  Text="手机登录"  Style="{StaticResource buttonStyle}" Clicked="loginHandler" />
+                <Button x:Name="regist" Text="手机注册"  Style="{StaticResource buttonStyle}" Clicked="registHandler" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

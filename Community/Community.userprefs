@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{E8241C28-12EE-413E-A8EA-BA1D21546284}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Community/Views/WelcomePage.xaml">
+    <Files>
+      <File FileName="Community/Views/WelcomePage.xaml" Line="21" Column="54" />
+      <File FileName="Community/Views/MobileRegisterPage.xaml" Line="10" Column="1" />
+      <File FileName="Community/Views/MobileLoginPage.xaml" Line="61" Column="33" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Volumes/Workspace/workspace_limingnihao_github/XamarinForms-Community/Community/Community/Views/LoginPage.xaml" relfile="Community/Views/LoginPage.xaml" line="19" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Community.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.E5D34029-C611-4349-B30B-06CDC4D43098" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Community.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.61.101:5555" />
+  <MultiItemStartupConfigurations />
+</Properties>
