@@ -12,12 +12,18 @@ namespace Community.Views
             InitializeComponent();
         }
 
-        async void loginHandler(object sender, System.EventArgs e){
+		protected async void onLoginHandler(object sender, System.EventArgs e)
+		{
+			await Navigation.PushModalAsync(new MainPage());
+		}
+
+        async void gotoLoginHandler(object sender, System.EventArgs e){
             await Navigation.PushAsync(new MobileLoginPage());
 		}
 
-        async void registHandler(object sender, System.EventArgs e){
+        async void gotoRegistHandler(object sender, System.EventArgs e){
             await Navigation.PushAsync(new MobileRegisterPage());
         }
     }
+
 }

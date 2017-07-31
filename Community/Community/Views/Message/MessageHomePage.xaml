@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="Community.Views.Myself.MyselfHomePage"
-             Title="我的" Icon="nav_myself.png">
+             x:Class="Community.Views.Message.MessageHomePage"
+             Title="消息" Icon="nav_message.png">
 	<ContentPage.Content>
-         <StackLayout>
-            <Label Text="我的首页"/>
+        <StackLayout>
+            <Label Text="消息首页"/>
         </StackLayout>
 	</ContentPage.Content>
 </ContentPage>

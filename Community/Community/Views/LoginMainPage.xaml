@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="Community.Views.LoginMainPage"
-    Title="登录">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Community.Views.LoginMainPage"
+             Title="登录">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="buttonQQStyle" TargetType="Button">
@@ -46,16 +44,16 @@
                      Spacing="15">
             <Image Source="xamarin_logo.png" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Center" />
             
-            <Button x:Name="login_wx" Style="{StaticResource buttonWXStyle}" Margin="0,50,0,0"/>
+            <Button x:Name="login_wx" Style="{StaticResource buttonWXStyle}" Clicked="onLoginHandler" Margin="0,50,0,0"/>
 
-            <Button x:Name="login_qq" Style="{StaticResource buttonQQStyle}"/>
+            <Button x:Name="login_qq" Style="{StaticResource buttonQQStyle}" Clicked="onLoginHandler"/>
 
             <StackLayout VerticalOptions="EndAndExpand"
                          HorizontalOptions="Center"
                          Orientation="Horizontal"
                         >
-                <Button x:Name="login"  Text="手机登录"  Style="{StaticResource buttonStyle}" Clicked="loginHandler" />
-                <Button x:Name="regist" Text="手机注册"  Style="{StaticResource buttonStyle}" Clicked="registHandler" />
+                <Button x:Name="login"  Text="手机登录"  Style="{StaticResource buttonStyle}" Clicked="gotoLoginHandler" />
+                <Button x:Name="regist" Text="手机注册"  Style="{StaticResource buttonStyle}" Clicked="gotoRegistHandler" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

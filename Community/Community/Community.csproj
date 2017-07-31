@@ -53,6 +53,9 @@
     <EmbeddedResource Include="Views\Goods\GoodsHomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Message\MessageHomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -83,6 +86,9 @@
     <Compile Include="Views\Goods\GoodsHomePage.xaml.cs">
       <DependentUpon>GoodsHomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Message\MessageHomePage.xaml.cs">
+      <DependentUpon>MessageHomePage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
@@ -91,6 +97,7 @@
     <Folder Include="Views\Goods\" />
     <Folder Include="Views\Order\" />
     <Folder Include="Views\News\" />
+    <Folder Include="Views\Message\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

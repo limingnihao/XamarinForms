@@ -1,71 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="Community.Views.MobileLoginPage"
-    Title="手机登录">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Community.Views.MobileLoginPage"
+             Title="手机登录">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Style x:Key="labelStyle" TargetType="Label">
-                <Setter Property="HorizontalOptions" Value="Center" />
-                <Setter Property="VerticalOptions" Value="Center" />
-                <Setter Property="FontSize" Value="15"/>
-                <Setter Property="FontAttributes" Value="Bold"/>
-                <Setter Property="Margin" Value="0,10,0,0"/>
-                <Setter Property="BackgroundColor" Value="Transparent"/>
-                <Setter Property="TextColor" Value="#FFFFFF"/>
-            </Style>
-            <Style x:Key="entryStyle" TargetType="Entry">
-                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <Setter Property="VerticalOptions" Value="Center" />
-                <Setter Property="Margin" Value="0,30,0,0"/>
-                <Setter Property="BackgroundColor" Value="Transparent"/>
-                <Setter Property="TextColor" Value="#FFFFFF"/>
-                <Setter Property="PlaceholderColor" Value="#FFFFFF"/>
-                <Setter Property="FontSize" Value="18"/>
-                <Style.Triggers>
-                    <Trigger TargetType="Entry" Property="IsFocused" Value="True">
-                        <Setter Property="TextColor" Value="#FFA000" />
-                    </Trigger>
-                </Style.Triggers>
-            </Style>
-
-             <Style x:Key="forgetButton" TargetType="Button">
+            <Style x:Key="buttonforget" TargetType="Button">
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="FontSize" Value="14"/>
-                <Setter Property="WidthRequest" Value="120"/>
-                <Setter Property="Margin" Value="0,10,0,0"/>
                 <Setter Property="BackgroundColor" Value="Transparent"/>
                 <Setter Property="TextColor" Value="#FFFFFF"/>
             </Style>
             
-            <Style x:Key="rememberButton" TargetType="Button" BasedOn="{StaticResource forgetButton}">
-                <Setter Property="Image" Value="tick-mark.png"/>
+            <Style x:Key="buttonRemember" TargetType="Button" BasedOn="{StaticResource buttonforget}">
+                <Setter Property="WidthRequest" Value="80"/>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.BackgroundImage>background_login_mobile.png</ContentPage.BackgroundImage>
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness"
-                    iOS="10, 40, 10, 20"
-                    Android="20, 20, 20, 20"
+                    iOS="10, 80, 10, 20"
+                    Android="20, 80, 20, 20"
                     WinPhone="20, 20, 20, 20" />
     </ContentPage.Padding>
     <ContentPage.Content>
-        <StackLayout VerticalOptions="FillAndExpand"
-                     HorizontalOptions="Center"
-                     Orientation="Vertical"
-                     Spacing="15">
-            
-            <Image Source="xamarin_logo.png" Margin="20,20,20,20"/>
-            <Label Text="使用手机号登录" Style="{StaticResource labelStyle}"/>
-            <Entry x:Name="username" Style="{StaticResource entryStyle}" Placeholder="请输入手机号"   />
-            <Entry x:Name="password" Style="{StaticResource entryStyle}" Placeholder="请输入密码" IsPassword="true" />
-            <StackLayout VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
-                <Button Text="记住密码" Style="{StaticResource rememberButton}"  />
-                <Button Text="忘记密码" Style="{StaticResource forgetButton}" />
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" 
+            Spacing="15" Margin="50,0,50,0">
+            <Label Text="使用手机号登录" Style="{StaticResource label_login}"/>
+            <Entry x:Name="username" Style="{StaticResource entry_login}" Placeholder="请输入手机号"   />
+            <Entry x:Name="password" Style="{StaticResource entry_login}" Placeholder="请输入密码" IsPassword="true" />
+
+            <StackLayout Orientation="Horizontal" Margin="0,20,0,0" >
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="imageRemeber" Image="tick-mark.png"  Clicked="onRemeberHandler"/>
+                    <Button x:Name="buttonRemember" Text="记住密码" Style="{StaticResource buttonRemember}" Clicked="onRemeberHandler" />
+                </StackLayout>
+                <Button x:Name="buttonforget" Text="忘记密码" HorizontalOptions="EndAndExpand" Style="{StaticResource buttonforget}" Margin="40,0,0,0" />
             </StackLayout>
-            <Button Text="登录" BackgroundColor="#FFA000" TextColor="#ffffff" FontAttributes="Bold" FontSize="20" BorderWidth="0" BorderRadius="25" HeightRequest="50" Margin="40,0,40,0" />
+
+            <Button x:Name="buttonLogin" Text="登录" Style="{StaticResource button_login}" Clicked="onLoginHandler"/>
         </StackLayout>
     </ContentPage.Content>
     

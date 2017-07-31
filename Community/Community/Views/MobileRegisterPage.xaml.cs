@@ -11,5 +11,10 @@ namespace Community.Views
         {
             InitializeComponent();
         }
+
+        async void onRegisterHandler(object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new MainPage());
+		}
     }
 }

@@ -13,6 +13,46 @@
                 <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
                 <Setter Property="BarTextColor" Value="White" />
             </Style>
+
+            <!-- 提示框 - 登录注册使用 -->
+            <Style x:Key="label_login" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="Margin" Value="0,10,0,0"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="TextColor" Value="#FFFFFF"/>
+            </Style>
+            
+            <!-- 输入框 - 登录注册使用 -->
+            <Style x:Key="entry_login" TargetType="Entry">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="Margin" Value="0,30,0,0"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="TextColor" Value="#FFFFFF"/>
+                <Setter Property="PlaceholderColor" Value="#FFFFFF"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Style.Triggers>
+                    <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                        <Setter Property="TextColor" Value="#FFA000" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <!-- 登录按钮 - 登录注册使用 -->
+            <Style x:Key="button_login" TargetType="Button">
+                <Setter Property="Margin" Value="40,0,40,0"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="BorderWidth" Value="0"/>
+                <Setter Property="BorderRadius" Value="25"/>
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="BackgroundColor" Value="#FFA000"/>
+                <Setter Property="TextColor" Value="#FFFFFF"/>
+            </Style>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

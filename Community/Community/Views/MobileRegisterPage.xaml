@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="Community.Views.MobileRegisterPage"
-    Title="手机注册">
-	<ContentPage.Content>
-	</ContentPage.Content>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Community.Views.MobileRegisterPage"
+             Title="手机注册">
+    <ContentPage.BackgroundImage>background_register_mobile.png</ContentPage.BackgroundImage>
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="10, 80, 10, 20"
+                    Android="20, 80, 20, 20"
+                    WinPhone="20, 20, 20, 20" />
+    </ContentPage.Padding>
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" 
+                Spacing="15" Margin="50,0,50,0">
+        <Label Text="使用手机号注册" Style="{StaticResource label_login}"/>
+        <Entry x:Name="username"  Style="{StaticResource entry_login}" Placeholder="请输入手机号"   />
+        <Entry x:Name="checkcode" Style="{StaticResource entry_login}" Placeholder="请输入验证码" IsPassword="true" />
+        <Entry x:Name="password1" Style="{StaticResource entry_login}" Placeholder="请输入密码" IsPassword="true" />
+        <Entry x:Name="password2" Style="{StaticResource entry_login}" Placeholder="请确认密码" IsPassword="true" />
+        <Button Text="注册" Style="{StaticResource button_login}" Clicked="onRegisterHandler"/>
+
+    </StackLayout>
 </ContentPage>
