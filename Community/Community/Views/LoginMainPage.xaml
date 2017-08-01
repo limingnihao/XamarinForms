@@ -15,7 +15,6 @@
                 <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="BackgroundColor" Value="Transparent"/>
                 <Setter Property="Image" Value="btn_login_wx.png"/>
-                
             </Style>
             
             <Style x:Key="buttonStyle" TargetType="Button">

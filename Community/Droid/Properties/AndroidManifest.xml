@@ -5,5 +5,5 @@
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.READ_PROFILE" />
 	<uses-permission android:name="android.permission.WRITE_PROFILE" />
-	<application android:label="Community"></application>
+	<application android:label="Community" android:icon="@drawable/icon"></application>
 </manifest>

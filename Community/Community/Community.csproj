@@ -44,7 +44,7 @@
     <EmbeddedResource Include="Views\MobileLoginPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Myself\MyselfHomePage.xaml">
+    <EmbeddedResource Include="Views\News\NewsDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\News\NewsHomePage.xaml">
@@ -54,6 +54,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Message\MessageHomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Myself\MyselfHomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -77,27 +80,36 @@
     <Compile Include="Views\loginMobilePage.xaml.cs">
       <DependentUpon>MobileLoginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Myself\MyselfHomePage.xaml.cs">
-      <DependentUpon>MyselfHomePage.xaml</DependentUpon>
+
+    <Compile Include="Views\News\NewsDetailPage.xaml.cs">
+      <DependentUpon>NewsDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\News\NewsHomePage.xaml.cs">
       <DependentUpon>NewsHomePage.xaml</DependentUpon>
     </Compile>
+
     <Compile Include="Views\Goods\GoodsHomePage.xaml.cs">
       <DependentUpon>GoodsHomePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Message\MessageHomePage.xaml.cs">
       <DependentUpon>MessageHomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Myself\MyselfHomePage.xaml.cs">
+      <DependentUpon>MyselfHomePage.xaml</DependentUpon>
+    </Compile>
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Views\News\" />
+    <Folder Include="Views\Goods\" />
+    <Folder Include="Views\Message\" />
+    <Folder Include="Views\Myself\" />
+
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\" />
-    <Folder Include="Resources\" />
-    <Folder Include="Views\Myself\" />
-    <Folder Include="Views\Goods\" />
-    <Folder Include="Views\Order\" />
-    <Folder Include="Views\News\" />
-    <Folder Include="Views\Message\" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -109,15 +121,6 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.3.0.0.100-embeddingpreview\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\workspace_github\xamarin\xamarin-forms-book-samples\Libraries\Xamarin.FormsBook.Toolkit\Xamarin.FormsBook.Toolkit\Xamarin.FormsBook.Toolkit.csproj">
-      <Project>{58EEAFFF-D1BB-4375-AEFC-8270F8415DCE}</Project>
-      <Name>Xamarin.FormsBook.Toolkit</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.3.0.0.100-embeddingpreview\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.3.0.0.100-embeddingpreview\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

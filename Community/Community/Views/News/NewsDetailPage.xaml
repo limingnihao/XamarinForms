@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="Community.Views.Message.MessageHomePage"
-             Title="消息" >
+             x:Class="Community.Views.News.NewsDetailPage" Title="新闻详情">
 	<ContentPage.Content>
-        <StackLayout>
-            <Label Text="消息首页"/>
+         <StackLayout>
+            <Label Text="新闻详情"/>
         </StackLayout>
-	</ContentPage.Content>
+    </ContentPage.Content>
 </ContentPage>

@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-            x:Class="Community.Views.MainPage"
             xmlns:news="clr-namespace:Community.Views.News"
             xmlns:goods="clr-namespace:Community.Views.Goods"
             xmlns:message="clr-namespace:Community.Views.Message"
-            xmlns:myself="clr-namespace:Community.Views.Myself" >
+            xmlns:myself="clr-namespace:Community.Views.Myself" 
+            x:Class="Community.Views.MainPage" >
     <TabbedPage.Padding>
         <OnPlatform x:TypeArguments="Thickness"
-                    iOS="10, 80, 10, 20"
-                    Android="20, 80, 20, 20"
-                    WinPhone="20, 20, 20, 20" />
+                    iOS="0, 0, 0, 0"
+                    Android="0, 0, 0, 0" />
     </TabbedPage.Padding>
-    <NavigationPage Icon="nav_news.png" Title="资讯" Padding="10"  >
+     <NavigationPage Title="新闻" Icon="nav_news.png"  >
         <x:Arguments>
             <news:NewsHomePage />
         </x:Arguments>
     </NavigationPage>
-    <NavigationPage Icon="nav_goods.png" Title="商品" >
+      <NavigationPage Title="商品" Icon="nav_goods.png">
         <x:Arguments>
             <goods:GoodsHomePage />
         </x:Arguments>
     </NavigationPage>
-    <NavigationPage Icon="nav_message.png" Title="消息"> 
+     <NavigationPage  Title="消息" Icon="nav_message.png"> 
         <x:Arguments>
             <message:MessageHomePage />
         </x:Arguments>
     </NavigationPage>
-    <NavigationPage Icon="nav_myself.png" Title="我的"> 
+    <NavigationPage  Title="我的" Icon="nav_myself.png"> 
         <x:Arguments>
             <myself:MyselfHomePage />
         </x:Arguments>
     </NavigationPage>
+
+    
 </TabbedPage>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="Community.Views.Myself.MyselfHomePage"
-             Title="我的" Icon="nav_myself.png">
+             Title="我的" >
 	<ContentPage.Content>
          <StackLayout>
             <Label Text="我的首页"/>

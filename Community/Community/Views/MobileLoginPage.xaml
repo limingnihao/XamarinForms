@@ -33,7 +33,7 @@
 
             <StackLayout Orientation="Horizontal" Margin="0,20,0,0" >
                 <StackLayout Orientation="Horizontal">
-                    <Button x:Name="imageRemeber" Image="tick-mark.png"  Clicked="onRemeberHandler"/>
+                    <Button x:Name="imageRemeber" Image="check_mark_1.png" BackgroundColor="Transparent"  Clicked="onRemeberHandler"/>
                     <Button x:Name="buttonRemember" Text="记住密码" Style="{StaticResource buttonRemember}" Clicked="onRemeberHandler" />
                 </StackLayout>
                 <Button x:Name="buttonforget" Text="忘记密码" HorizontalOptions="EndAndExpand" Style="{StaticResource buttonforget}" Margin="40,0,0,0" />

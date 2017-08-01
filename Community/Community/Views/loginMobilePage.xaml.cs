@@ -22,10 +22,10 @@ namespace Community.Views
             this.isRemeber = !this.isRemeber;
 			if (this.isRemeber)
 			{
-			    this.imageRemeber.Image = "tick-mark.png";
+			    this.imageRemeber.Image = "check_mark_1.png";
 			}
 			else{
-			    this.imageRemeber.Image = "";
+			    this.imageRemeber.Image = "check_mark_0.png";
 			}
 		}
 

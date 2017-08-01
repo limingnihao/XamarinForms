@@ -143,9 +143,6 @@
     <BundleResource Include="Resources\background_login_mobile.png" />
     <BundleResource Include="Resources\background_login_mobile%402x.png" />
     <BundleResource Include="Resources\background_login_mobile%403x.png" />
-    <BundleResource Include="Resources\tick-mark.png" />
-    <BundleResource Include="Resources\tick-mark%402x.png" />
-    <BundleResource Include="Resources\tick-mark%403x.png" />
     <BundleResource Include="Resources\background_register_mobile.png" />
     <BundleResource Include="Resources\background_register_mobile%402x.png" />
     <BundleResource Include="Resources\background_register_mobile%403x.png" />
@@ -161,6 +158,12 @@
     <BundleResource Include="Resources\nav_myself%403.png" />
     <BundleResource Include="Resources\nav_news%402.png" />
     <BundleResource Include="Resources\nav_news%403.png" />
+    <BundleResource Include="Resources\check_mark_0.png" />
+    <BundleResource Include="Resources\check_mark_0%402.png" />
+    <BundleResource Include="Resources\check_mark_0%403.png" />
+    <BundleResource Include="Resources\check_mark_1.png" />
+    <BundleResource Include="Resources\check_mark_1%402x.png" />
+    <BundleResource Include="Resources\check_mark_1%403x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.3.0.0.100-embeddingpreview\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.3.0.0.100-embeddingpreview\build\netstandard1.0\Xamarin.Forms.targets')" />
