@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="Community.Views.Message.MessageHomePage"
-             Title="消息" >
-	<ContentPage.Content>
-        <StackLayout>
-            <Label Text="消息首页"/>
-        </StackLayout>
-	</ContentPage.Content>
+             Title="消息" Padding="0,5,0,0">
+	 <ContentPage.Content>
+        <ListView x:Name="listView" RowHeight="60" 
+                  RefreshAllowed="true" IsPullToRefreshEnabled="true" SeparatorVisibility="Default" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout HeightRequest="60" BackgroundColor="White" Orientation="Horizontal" >
+                            <Image Margin="10" WidthRequest="50" HeightRequest="40" Aspect="AspectFill" Source="{Binding HeadImg}" />
+                            <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                                <Label TextColor="Black" LineBreakMode="TailTruncation" FontSize="16" FontAttributes="Bold" Text="{Binding Nickname}" />
+                                <Label TextColor="Gray" LineBreakMode="TailTruncation" FontSize="12" FontAttributes="None" Text="{Binding Message}" />
+                            </StackLayout>
+                            <Label Margin="0,0,10,0" TextColor="Gray" LineBreakMode="TailTruncation" FontSize="15" FontAttributes="None" Text="{Binding LastTime}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </ContentPage.Content>
 </ContentPage>

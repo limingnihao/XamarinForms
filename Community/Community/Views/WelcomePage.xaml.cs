@@ -13,17 +13,11 @@ namespace Community.Views
 
 		}
 
-		//使用PushModalAsync没有上导航的返回，使用PushAsync会有上导航的返回
-
-		async void gotoLoginHandler1(object sender, System.EventArgs e)
-        {
-            await Navigation.PushAsync(new LoginMainPage());
+	    void gotoLoginHandler2(object sender, System.EventArgs e)
+		{
+            App.Current.MainPage = new NavigationPage(new LoginMainPage());
         }
 
-		async void gotoLoginHandler2(object sender, System.EventArgs e)
-		{
-            await Navigation.PushModalAsync(new NavigationPage(new LoginMainPage()));
-		}
     }
 
 }

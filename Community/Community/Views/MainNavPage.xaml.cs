@@ -2,9 +2,9 @@
 
 namespace Community.Views
 {
-    public partial class MainPage : TabbedPage
+    public partial class MainNavPage : TabbedPage
     {
-        public MainPage()
+        public MainNavPage()
         {
             InitializeComponent();
         }

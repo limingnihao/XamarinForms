@@ -42,7 +42,7 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
-<AssemblyName>com.limingnihao.Community.iOS</AssemblyName>
+<AssemblyName>com.limingnihao</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>pdbonly</DebugType>
@@ -78,7 +78,8 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
-<AssemblyName>com.limingnihao.Community.iOS</AssemblyName>
+<AssemblyName>com.limingnihao</AssemblyName>
+<CodesignProvision>iOS Team Provisioning Profile: com.limingnihao</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -108,6 +109,9 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\LaunchImage-800-Portrait-736h%403x.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default%402x.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-568h%402x-3.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -149,9 +153,6 @@
     <BundleResource Include="Resources\nav_message.png" />
     <BundleResource Include="Resources\nav_news.png" />
     <BundleResource Include="Resources\nav_myself.png" />
-    <BundleResource Include="Resources\nav_goods.png" />
-    <BundleResource Include="Resources\nav_goods%402.png" />
-    <BundleResource Include="Resources\nav_goods%403.png" />
     <BundleResource Include="Resources\nav_message%402.png" />
     <BundleResource Include="Resources\nav_message%403.png" />
     <BundleResource Include="Resources\nav_myself%402.png" />
@@ -164,6 +165,24 @@
     <BundleResource Include="Resources\check_mark_1.png" />
     <BundleResource Include="Resources\check_mark_1%402x.png" />
     <BundleResource Include="Resources\check_mark_1%403x.png" />
+    <BundleResource Include="Resources\bg_tools.png" />
+    <BundleResource Include="Resources\bg_tools%402x.png" />
+    <BundleResource Include="Resources\bg_tools%403x.png" />
+    <BundleResource Include="Resources\icon_order.png" />
+    <BundleResource Include="Resources\icon_order%402.png" />
+    <BundleResource Include="Resources\icon_order%403.png" />
+    <BundleResource Include="Resources\icon_setting.png" />
+    <BundleResource Include="Resources\icon_setting%402.png" />
+    <BundleResource Include="Resources\icon_setting%403.png" />
+    <BundleResource Include="Resources\icon_favorite.png" />
+    <BundleResource Include="Resources\icon_favorite%402.png" />
+    <BundleResource Include="Resources\icon_favorite%403.png" />
+    <BundleResource Include="Resources\icon_suggest.png" />
+    <BundleResource Include="Resources\icon_suggest%402.png" />
+    <BundleResource Include="Resources\icon_suggest%403.png" />
+    <BundleResource Include="Resources\nav_shopping.png" />
+    <BundleResource Include="Resources\nav_shopping%402.png" />
+    <BundleResource Include="Resources\nav_shopping%403.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.3.0.0.100-embeddingpreview\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.3.0.0.100-embeddingpreview\build\netstandard1.0\Xamarin.Forms.targets')" />

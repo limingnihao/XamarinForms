@@ -1,9 +1,5 @@
 ﻿using Xamarin.Forms;
 using Community.Views;
-using Community.Views.Goods;
-using Community.Views.Myself;
-using Community.Views.News;
-using Community.Views.Message;
 
 namespace Community
 {
@@ -13,11 +9,10 @@ namespace Community
         {
             InitializeComponent();
 
-			//MainPage = new MainPage();
-			MainPage = new NavigationPage(new WelcomePage()){
-				BarBackgroundColor = (Color)Current.Resources["Primary"],
-				BarTextColor = Color.White
-			};
+			 Current.MainPage = new MainNavPage();
+			// Current.MainPage = new LoginMainPage();
+			//Current.MainPage = new WelcomePage();
+	
 
         }
 

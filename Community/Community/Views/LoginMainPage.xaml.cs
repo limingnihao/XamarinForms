@@ -14,7 +14,7 @@ namespace Community.Views
 
 		protected async void onLoginHandler(object sender, System.EventArgs e)
 		{
-			await Navigation.PushModalAsync(new MainPage());
+			await Navigation.PushModalAsync(new MainNavPage());
 		}
 
         async void gotoLoginHandler(object sender, System.EventArgs e){

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Community.Views.Goods.GoodsItemView"
+    >
+	<ContentView.Content>
+        <StackLayout  BackgroundColor="White" Orientation="Vertical" >
+            <Image Margin="10" Aspect="AspectFill" HeightRequest="150" Source="http://img11.360buyimg.com/n1/s450x450_jfs/t6979/359/1213937001/138122/1cbe30f/597e9e4bNac9f03a2.jpg" />
+            <Label Margin="10,0,10,0"  TextColor="Black" FontSize="16" FontAttributes="Bold" LineBreakMode="TailTruncation" Text="商品名称1" />
+            <Label Margin="10,0,10,10" TextColor="Red"   FontSize="12" FontAttributes="Bold" LineBreakMode="TailTruncation" Text="￥64.50"  />
+         </StackLayout>
+	</ContentView.Content>
+</ContentView>
