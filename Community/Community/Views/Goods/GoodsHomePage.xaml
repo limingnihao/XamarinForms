@@ -4,6 +4,9 @@
              xmlns:goods="clr-namespace:Community.Views.Goods"
              BackgroundColor="#E2DFED"
              Title="购物">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="购物车"/>
+    </ContentPage.ToolbarItems>
 	<ContentPage.Content>
         <StackLayout Orientation="Vertical">
             <Grid >

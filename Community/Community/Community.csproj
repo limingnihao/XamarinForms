@@ -110,6 +110,7 @@
     <Compile Include="Models\NewsResultBean.cs" />
     <Compile Include="Helps\LogHelp.cs" />
     <Compile Include="Models\ImageBean.cs" />
+    <Compile Include="Models\ResultBean.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />

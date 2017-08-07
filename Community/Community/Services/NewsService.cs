@@ -34,13 +34,24 @@ namespace Community.Services
             return list;
 		}
 
-        public async Task<IList<NewsListBean>> GetNewsList(long time){
-            string type = "top";
+        public async Task<ResultBean<IList<NewsListBean>>> GetNewsList(long time, string type){
             string key = "ff3460eb96b32f8dca051ae1248a2e8a";
             string result = await HttpHelp.getInstance().Get("http://v.juhe.cn/toutiao/index?type=" + type + "&key=" + key);
             logger.info("GetNewsList - " + time + ", " + result);
-            NewsResultBean resultBean = JsonHelp.FromJson<NewsResultBean>(result);
-            return resultBean.result.data;
+            NewsResultBean newsresultBean = JsonHelp.FromJson<NewsResultBean>(result);
+            ResultBean<IList<NewsListBean>> rb = new ResultBean<IList<NewsListBean>>();
+            if(newsresultBean.result.data != null){
+				rb.Success = true;
+				rb.Message = "请求成功";
+				rb.Data = newsresultBean.result.data;
+                foreach(NewsListBean b in rb.Data){
+                    b.image = b.thumbnail_pic_s;
+                }
+            } else {
+                rb.Success = false;
+				rb.Message = "请求失败";
+			}
+            return rb;
         }
 
     }

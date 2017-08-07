@@ -2,6 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="Community.Views.Message.MessageHomePage"
              Title="消息" Padding="0,5,0,0">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="好友"/>
+    </ContentPage.ToolbarItems>
 	 <ContentPage.Content>
         <ListView x:Name="listView" RowHeight="60" 
                   RefreshAllowed="true" IsPullToRefreshEnabled="true" SeparatorVisibility="Default" >
