@@ -13,7 +13,9 @@
                 </Grid.ColumnDefinitions>
                 <Image Source="bg_tools.png" Aspect="AspectFill" VerticalOptions="Fill" Grid.ColumnSpan="2"/>
                 <Label Margin="10,0,0,0" Text="排序1" TextColor="White" FontSize="14" VerticalOptions="Center" />
+
             </Grid>
+            <SearchBar x:Name="searchBar" FontSize="14" Placeholder="请输入搜索内容" BackgroundColor="Transparent" />
             <ScrollView Margin="10,0,10,10"  >
                 <Grid >
                     <Grid.RowDefinitions>

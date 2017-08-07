@@ -1,36 +1,31 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace Community.Models
 {
     public class NewsListBean : INotifyPropertyChanged
     {
-        private int id;
-        private string title;
-        private string subtitle;
-        private string image;
+        private string _title;
+        private string _image;
+        //private string _author_name;
+        //private string _category;
+        //private string _date;
+        public string thumbnail_pic_s { get; set; }
+        public string thumbnail_pic_s02 { get; set; }
+        public string thumbnail_pic_s03 { get; set; }
 
-        public int Id 
+        public string title 
         { 
-            get { return id; } 
-            set { id = value; this.OnPropertyChanged("Id"); } 
+            get { return _title;  }
+            set { _title = value; this.OnPropertyChanged("title");} 
         }
-        public string Title 
-        { 
-            get { return title;  }
-            set { title = value; this.OnPropertyChanged("Title");} 
-        }
-        public string Subtitle 
-        { 
-            get { return subtitle; } 
-            set { subtitle = value; this.OnPropertyChanged("Subtitle"); }
-        }
-        public string Image 
+        public string image 
         {
-			get { return image; }
-			set { image = value; this.OnPropertyChanged("Image"); }
+			get { return _image; }
+			set { _image = value; this.OnPropertyChanged("image"); }
 		}
-
+		
         public event PropertyChangedEventHandler PropertyChanged;
 
 		public void OnPropertyChanged(string property)

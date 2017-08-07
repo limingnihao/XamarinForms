@@ -12,5 +12,5 @@ Xamarin练习项目，一个商城，交友平台。使用forms开发。可在io
 2. Myself 我的：个人资料、我的订单、收获地址、密码与安全等。
 3. News 新闻：一个cms系统。
 
-###需要增加一个NuGet的源，因为我用了forms3.0的版本。
-在首选项->NuGet->源里增加一个 https://www.myget.org/F/xamarinforms-dev/api/v3/index.json
+##需要增加一个NuGet的源，因为我用了forms3.0的版本。
+在“首选项->NuGet->源”里增加一个 https://www.myget.org/F/xamarinforms-dev/api/v3/index.json

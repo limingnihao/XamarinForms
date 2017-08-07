@@ -15,7 +15,7 @@ namespace Community.Views
 
 	    void gotoLoginHandler2(object sender, System.EventArgs e)
 		{
-            App.Current.MainPage = new NavigationPage(new LoginMainPage());
+            App.Current.MainPage = new NavigationPage(new MainLoginPage());
         }
 
     }

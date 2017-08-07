@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using Community.Helps;
 using Community.Models;
 using Community.Services;
@@ -10,7 +11,8 @@ namespace Community.Views.News
 {
     public partial class NewsHomePage : ContentPage
     {
-        private NewsService newsService = null;
+		private LogHelp logger = DependencyService.Get<LogHelp>();
+		private NewsService newsService = null;
 
 		public ObservableCollection<NewsListBean> newsList { get; set; }
 
@@ -22,49 +24,51 @@ namespace Community.Views.News
             this.listView.ItemsSource = this.newsList;
 			this.listView.ItemSelected += OnSelection;
             this.listView.RefreshCommand = new CommandHelp<NewsListBean>(p=>this.OnRefreshHandler(), null);
-			this.getNewsList();
+			this.OnRefreshHandler();
 		}
 
         /// <summary>
         /// 选择一条
         /// </summary>
-        private void OnSelection(object sender, SelectedItemChangedEventArgs e)
+        async private void OnSelection(object sender, SelectedItemChangedEventArgs e)
         {
             if (e.SelectedItem == null)
 			{
 				return;
 			}
-			DisplayAlert("Item Selected", e.SelectedItem.ToString(), "Ok");
-        }
+			//DisplayAlert("Item Selected", e.SelectedItem.ToString(), "Ok");
+			await Navigation.PushAsync(new NewsDetailPage());
+		}
 
         /// <summary>
         /// 下拉刷新
         /// </summary>
         private void OnRefreshHandler(){
             this.newsList.Clear();
-            this.getNewsList();
-			this.listView.EndRefresh();
-        }
-
-        /// <summary>
-        /// Handles the scroll to requested.
-        /// </summary>
-        private void Handle_ScrollToRequested(object sender, ScrollToRequestedEventArgs e)
-        {
+            logger.info("OnRefreshHandler----start----");
 			this.getNewsList();
+			logger.info("OnRefreshHandler----over----");
 		}
 
         /// <summary>
         /// 获取新闻列表
         /// </summary>
-        private void getNewsList(){
-            IList<NewsListBean> list = this.newsService.GetNewsList();
-            foreach(NewsListBean bean in list){
-                this.newsList.Add(bean);
-            }
-        }
-
-
-
+        async void getNewsList(){
+            double now = DateTime.Now.Subtract(DateTime.Parse("1970-1-1")).TotalSeconds;
+            IList<NewsListBean> list = await this.newsService.GetNewsList((long)now);
+			logger.info("---getNewsList----get---" + list);
+            if(list != null){
+				foreach (NewsListBean bean in list)
+				{
+					bean.image = bean.thumbnail_pic_s02;
+					logger.info(bean.title + ", " + bean.image);
+					this.newsList.Add(bean);
+				}
+			}
+            this.listView.EndRefresh();
+			this.listView.IsRefreshing = false;
+		}
 	}
+
+
 }

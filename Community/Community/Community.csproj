@@ -32,7 +32,7 @@
     <EmbeddedResource Include="Views\WelcomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\LoginMainPage.xaml">
+    <EmbeddedResource Include="Views\MainLoginPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainNavPage.xaml">
@@ -71,8 +71,8 @@
     <Compile Include="Views\WelcomePage.xaml.cs">
       <DependentUpon>WelcomePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\LoginMainPage.xaml.cs">
-      <DependentUpon>LoginMainPage.xaml</DependentUpon>
+    <Compile Include="Views\MainLoginPage.xaml.cs">
+      <DependentUpon>MainLoginPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainNavPage.xaml.cs">
       <DependentUpon>MainNavPage.xaml</DependentUpon>
@@ -106,6 +106,10 @@
       <DependentUpon>GoodsItemView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\MessageListBean.cs" />
+    <Compile Include="Helps\JsonHelp.cs" />
+    <Compile Include="Models\NewsResultBean.cs" />
+    <Compile Include="Helps\LogHelp.cs" />
+    <Compile Include="Models\ImageBean.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -129,6 +133,9 @@
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.3.0.0.100-embeddingpreview\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

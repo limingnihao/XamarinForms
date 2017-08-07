@@ -4,21 +4,8 @@
             xmlns:goods="clr-namespace:Community.Views.Goods"
             xmlns:message="clr-namespace:Community.Views.Message"
             xmlns:myself="clr-namespace:Community.Views.Myself" 
-            x:Class="Community.Views.MainNavPage"  Padding="50" 
-            BarBackgroundColor="{StaticResource PrimaryDark}" BarTextColor="White" >
-     <ContentPage.Resources>
-        <ResourceDictionary>
-             <Style TargetType="NavigationPage">
-                <Setter Property="BackgroundColor" Value="Transparent" />
-                <Setter Property="BarBackgroundColor" Value="White" />
-                <Setter Property="BarTextColor" Value="Black" />
-            </Style>
-        </ResourceDictionary>
-    </ContentPage.Resources>    
-    <TabbedPage.Padding>
-        <OnPlatform x:TypeArguments="Thickness"
-                    iOS="0, 0, 0, 0" Android="0, 0, 0, 0" />
-    </TabbedPage.Padding>
+            x:Class="Community.Views.MainNavPage"
+    >
     <NavigationPage Title="新闻" Icon="nav_news.png" >
         <x:Arguments >
             <news:NewsHomePage />
@@ -40,5 +27,4 @@
         </x:Arguments>
     </NavigationPage>
 
-    
 </TabbedPage>
