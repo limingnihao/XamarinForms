@@ -106,12 +106,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\LaunchImage-800-Portrait-736h%403x.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default%402x.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-568h%402x-3.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -184,6 +181,12 @@
     <BundleResource Include="Resources\nav_shopping.png" />
     <BundleResource Include="Resources\nav_shopping%402.png" />
     <BundleResource Include="Resources\nav_shopping%403.png" />
+    <BundleResource Include="Resources\check_list_0.png" />
+    <BundleResource Include="Resources\check_list_0%402.png" />
+    <BundleResource Include="Resources\check_list_0%403.png" />
+    <BundleResource Include="Resources\check_list_1.png" />
+    <BundleResource Include="Resources\check_list_1%402.png" />
+    <BundleResource Include="Resources\check_list_1%403.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.3.0.0.100-embeddingpreview\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.3.0.0.100-embeddingpreview\build\netstandard1.0\Xamarin.Forms.targets')" />

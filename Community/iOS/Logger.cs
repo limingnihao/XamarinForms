@@ -8,9 +8,18 @@ namespace Community.iOS
 {
     public class Logger : LogHelp
     {
-        public void info(string msg)
+        private string name = "";
+       
+        public LogHelp setName(string name)
         {
-            System.Console.WriteLine(msg);
+            this.name = name;
+            return this;
         }
+
+		public void info(string msg)
+		{
+			System.Console.WriteLine("[" + name + "] - " + msg);
+		}
     }
+
 }

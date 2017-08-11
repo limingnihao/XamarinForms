@@ -32,5 +32,20 @@
         <image name="background_login.png" width="375" height="667"/>
         <image name="btn_login_qq.png" width="216" height="99"/>
         <image name="btn_login_wx.png" width="216" height="99"/>
+        <image name="background_login_mobile.png" width="375" height="667"/>
+        <image name="background_register_mobile.png" width="375" height="667"/>
+        <image name="nav_message.png" width="32" height="32"/>
+        <image name="nav_news.png" width="32" height="32"/>
+        <image name="nav_myself.png" width="32" height="32"/>
+        <image name="check_mark_0.png" width="25" height="25"/>
+        <image name="check_mark_1.png" width="25" height="25"/>
+        <image name="bg_tools.png" width="375" height="76"/>
+        <image name="icon_order.png" width="32" height="32"/>
+        <image name="icon_setting.png" width="32" height="32"/>
+        <image name="icon_favorite.png" width="32" height="32"/>
+        <image name="icon_suggest.png" width="32" height="32"/>
+        <image name="nav_shopping.png" width="32" height="32"/>
+        <image name="check_list_0.png" width="32" height="32"/>
+        <image name="check_list_1.png" width="32" height="32"/>
     </resources>
 </document>

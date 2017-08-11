@@ -1,49 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="Community.Views.Goods.GoodsHomePage"
              xmlns:goods="clr-namespace:Community.Views.Goods"
+             xmlns:toolkit="clr-namespace:Community.Toolkit"
              BackgroundColor="#E2DFED"
              Title="购物">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="购物车"/>
     </ContentPage.ToolbarItems>
+                <!--  <SearchBar x:Name="searchBar" FontSize="12" Placeholder="请输入搜索内容" />  -->
+
 	<ContentPage.Content>
-        <StackLayout Orientation="Vertical">
-            <Grid >
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Image Source="bg_tools.png" Aspect="AspectFill" VerticalOptions="Fill" Grid.ColumnSpan="2"/>
-                <Label Margin="10,0,0,0" Text="排序1" TextColor="White" FontSize="14" VerticalOptions="Center" />
-
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" VerticalOptions="Fill">
+                <Image Source="bg_tools.png" Aspect="AspectFill" VerticalOptions="Fill" />
+                <StackLayout Orientation="Horizontal">
+                    <Label Margin="10,0,0,0" Text="综合" TextColor="White" FontSize="14" VerticalOptions="Center" />
+                    <Label Margin="10,0,0,0" Text="销量" TextColor="White" FontSize="14" VerticalOptions="Center" />
+                    <toolkit:CheckBox x:Name="checkType" OnImage="check_list_0.png"  OffImage="check_list_1.png" HorizontalOptions="EndAndExpand" CheckedChanged="switchHandler"/>
+                </StackLayout>
             </Grid>
-            <SearchBar x:Name="searchBar" FontSize="14" Placeholder="请输入搜索内容" BackgroundColor="Transparent" />
-            <ScrollView Margin="10,0,10,10"  >
-                <Grid >
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-
-                    <goods:GoodsItemView Grid.Row="0" Grid.Column="0"  />
-                    <goods:GoodsItemView Grid.Row="0" Grid.Column="1"  />
-                    <goods:GoodsItemView Grid.Row="1" Grid.Column="0"  />
-                    <goods:GoodsItemView Grid.Row="1" Grid.Column="1"  />
-                    <goods:GoodsItemView Grid.Row="2" Grid.Column="0"  />
-                    <goods:GoodsItemView Grid.Row="2" Grid.Column="1"  />
-                    <goods:GoodsItemView Grid.Row="3" Grid.Column="0"  />
-                    <goods:GoodsItemView Grid.Row="3" Grid.Column="1"  />
-                    <goods:GoodsItemView Grid.Row="4" Grid.Column="0"  />
-                    <goods:GoodsItemView Grid.Row="4" Grid.Column="1"  />
-                    <goods:GoodsItemView Grid.Row="5" Grid.Column="0"  />
-                    <goods:GoodsItemView Grid.Row="5" Grid.Column="1"  />
-                </Grid>
-            </ScrollView>
-        </StackLayout>
-
+            <ListView x:Name="listView" Grid.Row="1" BackgroundColor="#E2DFED" RefreshAllowed="true" IsPullToRefreshEnabled="true" SeparatorVisibility="None" >
+            </ListView>
+        </Grid>
 	</ContentPage.Content>
 </ContentPage>

@@ -59,7 +59,13 @@
     <EmbeddedResource Include="Views\Myself\MyselfHomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Goods\GoodsItemView.xaml">
+    <EmbeddedResource Include="Views\Goods\ItemListView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Goods\ItemGirdView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Goods\GoodsDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -102,8 +108,8 @@
     <Compile Include="Helps\CommandHelp.cs" />
     <Compile Include="Services\NewsService.cs" />
     <Compile Include="Helps\HttpHelp.cs" />
-    <Compile Include="Views\Goods\GoodsItemView.cs">
-      <DependentUpon>GoodsItemView.xaml</DependentUpon>
+    <Compile Include="Views\Goods\ItemListView.cs">
+      <DependentUpon>ItemListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\MessageListBean.cs" />
     <Compile Include="Helps\JsonHelp.cs" />
@@ -111,6 +117,16 @@
     <Compile Include="Helps\LogHelp.cs" />
     <Compile Include="Models\ImageBean.cs" />
     <Compile Include="Models\ResultBean.cs" />
+    <Compile Include="Toolkit\CheckBox.cs" />
+    <Compile Include="Toolkit\RadioButton.cs" />
+    <Compile Include="Toolkit\ListGridView.cs" />
+    <Compile Include="Views\Goods\ItemGirdView.xaml.cs">
+      <DependentUpon>ItemGirdView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Goods\GoodsDetailPage.xaml.cs">
+      <DependentUpon>GoodsDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GoodsListBean.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -121,6 +137,7 @@
     <Folder Include="Services\" />
     <Folder Include="Models\" />
     <Folder Include="Helps\" />
+    <Folder Include="Toolkit\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -3,16 +3,15 @@
              x:Class="Community.Views.News.NewsHomePage" 
              Title="新闻">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add"/>
+        <ToolbarItem Text="收藏"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Margin="0" BackgroundColor="#E2DFED">
             <ScrollView Orientation="Horizontal" Margin="0">
-                <StackLayout x:Name="layoutType" Orientation="Horizontal" Margin="5,0,5,0" >
-                </StackLayout>
+                <StackLayout x:Name="layoutType" Orientation="Horizontal" Margin="5,0,5,0" ></StackLayout>
             </ScrollView>
             <ListView x:Name="listView" RowHeight="200" BackgroundColor="#E2DFED"
-                      RefreshAllowed="true" IsPullToRefreshEnabled="true" SeparatorVisibility="None">
+                      RefreshAllowed="true" IsPullToRefreshEnabled="true" SeparatorVisibility="None" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

@@ -3,7 +3,8 @@ namespace Community.Helps
 {
     public interface LogHelp
     {
-		void info(string msg);
+        LogHelp setName(string name);
 
+        void info(string v);
 	}
 }

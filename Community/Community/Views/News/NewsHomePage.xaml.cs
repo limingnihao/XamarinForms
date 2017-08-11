@@ -11,7 +11,7 @@ namespace Community.Views.News
 {
     public partial class NewsHomePage : ContentPage
     {
-		private LogHelp logger = DependencyService.Get<LogHelp>();
+        private LogHelp logger = DependencyService.Get<LogHelp>().setName("NewsHomePage");
 		private NewsService newsService = null;
 
 		private ObservableCollection<NewsListBean> newsList { get; set; }
@@ -24,12 +24,12 @@ namespace Community.Views.News
             this.newsService = NewsService.GetInstance();
             this.newsList = new ObservableCollection<NewsListBean>();
             this.listView.ItemsSource = this.newsList;
-			this.listView.ItemSelected += this.onSelection;
+			this.listView.ItemSelected += this.onSelectionHandler;
             this.listView.RefreshCommand = new CommandHelp<NewsListBean>(p=>this.onRefreshHandler(), null);
             this.setTypeView();
 		}
 
-        private void setTypeView(){
+        protected void setTypeView(){
             IList<NewsTypeBean> list = new List<NewsTypeBean>();
             list.Add(new NewsTypeBean { name = "热点", code = "top" });
 			list.Add(new NewsTypeBean { name = "社会", code = "shehui" });
@@ -45,6 +45,7 @@ namespace Community.Views.News
                 Button button = new Button();
                 button.Text = b.name;
                 button.Margin = new Thickness(5, 0, 0, 0);
+                button.BackgroundColor = Color.Transparent;
                 if(b.code.Equals("top")){
 					button.TextColor = Color.Red;
                 }else{
@@ -55,7 +56,6 @@ namespace Community.Views.News
                 button.Command = new CommandHelp<NewsTypeBean>(p => this.onTypeRefreshHandler(p), null);
 				this.layoutType.Children.Add(button);
 			}
-
 			this.onRefreshHandler();
 		}
 
@@ -63,8 +63,7 @@ namespace Community.Views.News
         {
             logger.info("onTypeRefreshHandler - " + p.name + ", " + p.code);
             this.type = p.code;
-			this.newsList.Clear();
-            this.getNewsList();
+            this.listView.BeginRefresh();
 		}
 
         private void onTypeClickHandler(object sender, EventArgs e)
@@ -79,21 +78,21 @@ namespace Community.Views.News
         /// <summary>
         /// 选择一条
         /// </summary>
-        async private void onSelection(object sender, SelectedItemChangedEventArgs e)
+        async private void onSelectionHandler(object sender, SelectedItemChangedEventArgs e)
         {
             if (e.SelectedItem == null)
 			{
 				return;
 			}
-			//DisplayAlert("Item Selected", e.SelectedItem.ToString(), "Ok");
-			await Navigation.PushAsync(new NewsDetailPage());
+            //DisplayAlert("Item Selected", e.SelectedItem.ToString(), "Ok");
+            this.listView.SelectedItem = null;
+            await Navigation.PushAsync(new NewsDetailPage());
 		}
 
         /// <summary>
         /// 下拉刷新
         /// </summary>
         private void onRefreshHandler(){
-            this.newsList.Clear();
             logger.info("OnRefreshHandler----start----");
 			this.getNewsList();
 			logger.info("OnRefreshHandler----over----");
@@ -107,7 +106,8 @@ namespace Community.Views.News
             ResultBean<IList<NewsListBean>> rb = await this.newsService.GetNewsList((long)now, this.type);
             logger.info("---getNewsList----get---, type=" + this.type + ", msg=" + rb.Message);
             if(rb.Success){
-                foreach (NewsListBean bean in rb.Data)
+				this.newsList.Clear();
+				foreach (NewsListBean bean in rb.Data)
 				{
 					this.newsList.Add(bean);
 				}

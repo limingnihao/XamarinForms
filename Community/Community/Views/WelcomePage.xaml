@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-              x:Class="Community.Views.WelcomePage" >
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+              x:Class="Community.Views.WelcomePage" 
+              xmlns:toolkit="clr-namespace:Community.Toolkit">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -19,6 +20,9 @@
         <ContentPage.BackgroundImage>Background_1.png</ContentPage.BackgroundImage>
         <StackLayout VerticalOptions="CenterAndExpand">
             <Label Text="请往左滑动！！！" Style="{StaticResource labelStyle}"/>
+            <toolkit:CheckBox IsChecked ="true" CheckedChanged="Handle_CheckedChanged"/>
+            <toolkit:CheckBox OnImage="check_list_0.png"  OffImage="check_list_1.png" />
+
         </StackLayout>
     </ContentPage>
     <ContentPage>

@@ -1,0 +1,19 @@
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Community.Views.Goods.ItemListView" >
+	<ContentView.Content>
+         <StackLayout Margin="3,3,3,0" BackgroundColor="White" Orientation="Horizontal" VerticalOptions="Center" >
+            <Image Aspect="AspectFit" WidthRequest="100" HeightRequest="100" Source="{Binding Image}" />
+            <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                <Label TextColor="Black" FontSize="12" FontAttributes="Bold" LineBreakMode="TailTruncation" Text="{Binding Title}" />
+                <Label TextColor="Black" FontSize="12" FontAttributes="Bold" LineBreakMode="TailTruncation" Text="{Binding Description}"  />
+                <StackLayout Orientation="Horizontal">
+                    <Label TextColor="Red"   FontSize="12" FontAttributes="Bold" LineBreakMode="TailTruncation" VerticalOptions="Center" Margin="0" Text="￥"  />
+                    <Label TextColor="Red"   FontSize="12" FontAttributes="Bold" LineBreakMode="TailTruncation" VerticalOptions="Center" Margin="-5,0,0,0" Text="{Binding Price}"  />
+                    <Label TextColor="Gray"  FontSize="10" FontAttributes="None" LineBreakMode="TailTruncation" VerticalOptions="Center" Margin="0" Text="{Binding Postage}"  />
+                    <Label TextColor="Black" FontSize="10" FontAttributes="None" LineBreakMode="TailTruncation" VerticalOptions="Center" Margin="0" Text="{Binding Total}"  />
+                    <Label TextColor="Black" FontSize="10" FontAttributes="None" LineBreakMode="TailTruncation" VerticalOptions="Center" Margin="-5,0,0,0" Text="人购买"  />
+                </StackLayout>
+            </StackLayout>
+         </StackLayout>
+    </ContentView.Content>
+</ContentView>
