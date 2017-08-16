@@ -15,8 +15,8 @@ namespace Community.iOS
             global::Xamarin.Forms.Forms.Init();
 
             LoadApplication(new App());
-
-            return base.FinishedLaunching(app, options);
+			ImageCircle.Forms.Plugin.iOS.ImageCircleRenderer.Init();
+			return base.FinishedLaunching(app, options);
         }
     }
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
              x:Class="Community.Views.Message.MessageHomePage"
              Title="消息" Padding="0,5,0,0">
     <ContentPage.ToolbarItems>
@@ -7,13 +8,17 @@
     </ContentPage.ToolbarItems>
 	 <ContentPage.Content>
         <ListView x:Name="listView" RowHeight="60" 
-                  RefreshAllowed="true" IsPullToRefreshEnabled="true" SeparatorVisibility="Default" >
+                  RefreshAllowed="true" IsPullToRefreshEnabled="true" SeparatorVisibility="Default" SeparatorColor="Green">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Clicked="unreadHandler" CommandParameter="{Binding .}" Text="标为未读" />
+                            <MenuItem Clicked="deleteHandler" CommandParameter="{Binding .}" Text="删除" IsDestructive="True" />
+                        </ViewCell.ContextActions>
                         <StackLayout HeightRequest="60" BackgroundColor="White" Orientation="Horizontal" >
-                            <Image Margin="10" WidthRequest="50" HeightRequest="40" Aspect="AspectFill" Source="{Binding HeadImg}" />
-                            <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                            <controls:CircleImage Margin="5" HeightRequest="50" WidthRequest="50" Source="{Binding HeadImg}" Aspect="AspectFill"/>
+                            <StackLayout Orientation="Vertical" VerticalOptions="Center" >
                                 <Label TextColor="Black" LineBreakMode="TailTruncation" FontSize="16" FontAttributes="Bold" Text="{Binding Nickname}" />
                                 <Label TextColor="Gray" LineBreakMode="TailTruncation" FontSize="12" FontAttributes="None" Text="{Binding Message}" />
                             </StackLayout>

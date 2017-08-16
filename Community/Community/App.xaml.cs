@@ -1,5 +1,6 @@
 ﻿using Xamarin.Forms;
 using Community.Views;
+using Community.Views.Message;
 
 namespace Community
 {
@@ -9,10 +10,10 @@ namespace Community
         {
             InitializeComponent();
 
-			 Current.MainPage = new MainNavPage();
-			// Current.MainPage = new LoginMainPage();
-			//Current.MainPage = new WelcomePage();
-	
+            Current.MainPage = new MainNavPage();
+            //Current.MainPage = new ChatPage();
+            //Current.MainPage = new WelcomePage();
+            //Current.MainPage = new NavigationPage(new MainLoginPage());
 
         }
 

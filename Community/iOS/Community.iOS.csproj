@@ -98,6 +98,16 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.3.0.0.100-embeddingpreview\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.1.8.1\lib\Xamarin.iOS10\ImageCircle.Forms.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin.iOS">
+      <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.1.8.1\lib\Xamarin.iOS10\ImageCircle.Forms.Plugin.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Matrix">
+      <HintPath>..\packages\MatriX.Xamarin.iOS.2.1.0.2\lib\Xamarin.iOS10\Matrix.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Community\Community.csproj">
@@ -112,6 +122,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Toolkit\" />
+    <Folder Include="Help\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -124,7 +136,8 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="Logger.cs" />
+    <Compile Include="Help\Logger.cs" />
+    <Compile Include="Help\Xmpper.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\xamarin_logo.png" />
@@ -187,6 +200,21 @@
     <BundleResource Include="Resources\check_list_1.png" />
     <BundleResource Include="Resources\check_list_1%402.png" />
     <BundleResource Include="Resources\check_list_1%403.png" />
+    <BundleResource Include="Resources\head1.jpg" />
+    <BundleResource Include="Resources\btn_keyboard.png" />
+    <BundleResource Include="Resources\btn_keyboard%402.png" />
+    <BundleResource Include="Resources\btn_keyboard%403.png" />
+    <BundleResource Include="Resources\btn_voice.png" />
+    <BundleResource Include="Resources\btn_voice%402.png" />
+    <BundleResource Include="Resources\btn_voice%403.png" />
+    <BundleResource Include="Resources\btn_emot.png" />
+    <BundleResource Include="Resources\btn_emot%402.png" />
+    <BundleResource Include="Resources\btn_emot%403.png" />
+    <BundleResource Include="Resources\btn_emot48.png" />
+    <BundleResource Include="Resources\btn_more.png" />
+    <BundleResource Include="Resources\btn_more%402.png" />
+    <BundleResource Include="Resources\btn_more%403.png" />
+    <BundleResource Include="Resources\head2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.3.0.0.100-embeddingpreview\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.3.0.0.100-embeddingpreview\build\netstandard1.0\Xamarin.Forms.targets')" />

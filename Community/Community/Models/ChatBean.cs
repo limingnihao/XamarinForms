@@ -1,22 +1,25 @@
 ﻿using System;
 using System.ComponentModel;
+using Xamarin.Forms;
 
 namespace Community.Models
 {
-    public class MessageListBean : INotifyPropertyChanged
-    {
-  
-        private int id;
-        private string nickname;
-        private string headImg;
-        private string message;
-        private string lastTime;
+	public class ChatBean : INotifyPropertyChanged
+	{
 
-        public int Id
-        {
+		private int id;
+		private string nickname;
+		private string headImg;
+		private string message;
+		private string lastTime;
+        private bool isOwner;
+        private bool isTarget;
+
+		public int Id
+		{
 			get { return id; }
 			set { id = value; this.OnPropertyChanged("Id"); }
-        }
+		}
 
 		public string Nickname
 		{
@@ -42,6 +45,18 @@ namespace Community.Models
 			set { lastTime = value; this.OnPropertyChanged("LastTime"); }
 		}
 
+		public bool IsOwner
+		{
+			get { return isOwner; }
+            set { isOwner = value; this.OnPropertyChanged("IsOwner"); }
+		}
+
+		public bool IsTarget
+		{
+			get { return isTarget; }
+			set { isTarget = value; this.OnPropertyChanged("IsTarget"); }
+		}
+
 		public event PropertyChangedEventHandler PropertyChanged;
 		public void OnPropertyChanged(string property)
 		{
@@ -51,6 +66,6 @@ namespace Community.Models
 			}
 		}
 
-    }
+	}
 }
 

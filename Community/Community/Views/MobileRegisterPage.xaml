@@ -9,14 +9,16 @@
                     Android="20, 80, 20, 20"
                     WinPhone="20, 20, 20, 20" />
     </ContentPage.Padding>
-    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" 
-                Spacing="15" Margin="50,0,50,0">
-        <Label Text="使用手机号注册" Style="{StaticResource label_login}"/>
-        <Entry x:Name="username"  Style="{StaticResource entry_login}" Placeholder="请输入手机号"   />
-        <Entry x:Name="checkcode" Style="{StaticResource entry_login}" Placeholder="请输入验证码" IsPassword="true" />
-        <Entry x:Name="password1" Style="{StaticResource entry_login}" Placeholder="请输入密码" IsPassword="true" />
-        <Entry x:Name="password2" Style="{StaticResource entry_login}" Placeholder="请确认密码" IsPassword="true" />
-        <Button Text="注册" Style="{StaticResource button_login}" Clicked="onRegisterHandler"/>
-
-    </StackLayout>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="15" Margin="50,0,50,0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" >
+                <Label Text="使用手机号注册" Style="{StaticResource label_login}"/>
+                <Entry x:Name="username"  Style="{StaticResource entry_login}" Placeholder="请输入手机号"   />
+                <Entry x:Name="checkcode" Style="{StaticResource entry_login}" Placeholder="请输入验证码" IsPassword="true" />
+                <Entry x:Name="password1" Style="{StaticResource entry_login}" Placeholder="请输入密码" IsPassword="true" />
+                <Entry x:Name="password2" Style="{StaticResource entry_login}" Placeholder="请确认密码" IsPassword="true" />
+                <Button Text="注册" Style="{StaticResource button_login}" Clicked="onRegisterHandler"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Community.Views.Message.ChatPage">
+    <ContentPage.BackgroundColor>#E6E6E6</ContentPage.BackgroundColor>
+    <ContentPage.Content>
+            <ListView x:Name="listView" BackgroundColor="#E6E6E6" HasUnevenRows="true" Footer="你好" ScrollToRequested="Handle_ScrollToRequested"
+                      VerticalOptions="FillAndExpand"
+                      RefreshAllowed="true" IsPullToRefreshEnabled="true" SeparatorVisibility="Default" SeparatorColor="Transparent">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <StackLayout IsVisible="{Binding IsTarget}" Margin="5,8,80,0" Orientation="Horizontal" HorizontalOptions="Start" >
+                                    <Image Source="{Binding HeadImg}" WidthRequest="40" HeightRequest="40" Aspect="AspectFill" VerticalOptions="Start"/>
+                                    <StackLayout Padding="8" HorizontalOptions="FillAndExpand" VerticalOptions="Start" BackgroundColor="White">
+                                        <Label Text="{Binding Message}" FontSize="12" VerticalOptions="Start"  />
+                                    </StackLayout>
+                                </StackLayout>
+                                <StackLayout IsVisible="{Binding IsOwner}" Margin="80,8,5,0" Orientation="Horizontal" HorizontalOptions="End" >
+                                    <StackLayout Padding="8" HorizontalOptions="FillAndExpand" VerticalOptions="Start" BackgroundColor="#A0E554">
+                                        <Label Text="{Binding Message}" FontSize="12" VerticalOptions="Start" />
+                                    </StackLayout>
+                                    <Image Source="{Binding HeadImg}" WidthRequest="40" HeightRequest="40" Aspect="AspectFill" VerticalOptions="Start" />
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.FooterTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="5,0,5,0" BackgroundColor="#F2F1F4" HeightRequest="55" Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                            <Button Image="btn_voice.png"/>
+                            <Entry HorizontalOptions="FillAndExpand" Margin="5,10,5,10" />
+                            <Button Image="btn_emot.png"/>
+                            <Button Image="btn_more.png"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </ListView.FooterTemplate>
+            </ListView>
+
+
+	</ContentPage.Content>
+</ContentPage>
