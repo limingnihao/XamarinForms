@@ -40,7 +40,7 @@ namespace Community.Services
             logger.info("GetNewsList - " + time + ", " + result);
             NewsResultBean newsresultBean = JsonHelp.FromJson<NewsResultBean>(result);
             ResultBean<IList<NewsListBean>> rb = new ResultBean<IList<NewsListBean>>();
-            if(newsresultBean.result.data != null){
+            if(newsresultBean != null && newsresultBean.result != null && newsresultBean.result.data != null){
 				rb.Success = true;
 				rb.Message = "请求成功";
 				rb.Data = newsresultBean.result.data;
