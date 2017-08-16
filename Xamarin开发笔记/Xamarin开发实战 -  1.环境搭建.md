@@ -23,6 +23,7 @@ Xamarin的三个优势：
 ## 1.2 环境搭建(macOS)
 
 下载地址：https://www.visualstudio.com进行下载Visual Studio。
+![安装截图1](https://github.com/limingnihao/XamarinForms-Community/blob/master/Xamarin%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/Image/Xamarin-1.2.1.png)
 
 
 ## 1.3 创建第一个forms程序
