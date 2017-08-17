@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Community.Helps;
 using Community.Models;
 using Community.Services;
+using Community.Views.Message;
 using Xamarin.Forms;
 
 namespace Community.Views.News
@@ -80,13 +81,16 @@ namespace Community.Views.News
         /// </summary>
         async private void onSelectionHandler(object sender, SelectedItemChangedEventArgs e)
         {
-            if (e.SelectedItem == null)
+			logger.info("onSelectionHandler - " + sender + ", " + e.SelectedItem);
+			if (e.SelectedItem == null)
 			{
 				return;
 			}
-            //DisplayAlert("Item Selected", e.SelectedItem.ToString(), "Ok");
             this.listView.SelectedItem = null;
-            await Navigation.PushAsync(new NewsDetailPage());
+            NewsDetailPage detailPage = new NewsDetailPage();
+            NavigationPage.SetBackButtonTitle(detailPage, "返回");
+			await this.Navigation.PushAsync(detailPage);
+
 		}
 
         /// <summary>

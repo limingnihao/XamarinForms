@@ -135,6 +135,7 @@
       <DependentUpon>ChatPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\ChatBean.cs" />
+    <Compile Include="Toolkit\MyEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\News\" />

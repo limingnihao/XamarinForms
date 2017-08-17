@@ -14,10 +14,9 @@ namespace Community.Services
     {
         private static NewsService NEWS_SERVICE = null;
 
-        private static LogHelp logger = null;
+        private static LogHelp logger = DependencyService.Get<LogHelp>().setName("NewsService");
         public static NewsService GetInstance(){
             if(NEWS_SERVICE == null){
-				logger = DependencyService.Get<LogHelp>();
                 NEWS_SERVICE = new NewsService();
             }
             return NEWS_SERVICE;

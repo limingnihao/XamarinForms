@@ -12,9 +12,9 @@ namespace Community.Views
             InitializeComponent();
         }
 
-		protected async void onLoginHandler(object sender, System.EventArgs e)
+		void onLoginHandler(object sender, System.EventArgs e)
 		{
-			await Navigation.PushModalAsync(new MainNavPage());
+			App.Current.MainPage = new NavigationPage(new MainNavPage());
 		}
 
         async void gotoLoginHandler(object sender, System.EventArgs e){

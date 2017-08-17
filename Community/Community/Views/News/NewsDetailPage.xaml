@@ -3,7 +3,7 @@
              x:Class="Community.Views.News.NewsDetailPage" Title="新闻详情">
 	<ContentPage.Content>
          <StackLayout>
-            <Label Text="新闻详情"/>
+            <Label Text="新闻详情11111"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

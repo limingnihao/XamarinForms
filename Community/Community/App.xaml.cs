@@ -10,12 +10,16 @@ namespace Community
         {
             InitializeComponent();
 
-            Current.MainPage = new MainNavPage();
+            //Current.MainPage = new MainNavPage();
             //Current.MainPage = new ChatPage();
             //Current.MainPage = new WelcomePage();
-            //Current.MainPage = new NavigationPage(new MainLoginPage());
 
-        }
+            //NavigationPage main = new NavigationPage(new MainNavPage());
+			//Current.MainPage = main;
+
+			Current.MainPage = new NavigationPage(new MainLoginPage());
+
+		}
 
         protected override void OnStart()
         {

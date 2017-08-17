@@ -5,26 +5,32 @@
             xmlns:message="clr-namespace:Community.Views.Message"
             xmlns:myself="clr-namespace:Community.Views.Myself" 
             x:Class="Community.Views.MainNavPage"
+            IsInNativeLayout="false"
     >
-    <NavigationPage Title="新闻" Icon="nav_news.png" >
-        <x:Arguments >
+    <news:NewsHomePage        Title="新闻" Icon="nav_news.png"/>
+    <goods:GoodsHomePage      Title="购物" Icon="nav_shopping.png"/>
+    <message:MessageHomePage  Title="消息" Icon="nav_message.png" />
+    <myself:MyselfHomePage    Title="我的" Icon="nav_myself.png"/>
+
+   <!-- <NavigationPage Title="新闻" Icon="nav_news.png">
+        <x:Arguments NavigationPage.HasNavigationBar="false">
             <news:NewsHomePage />
         </x:Arguments>
     </NavigationPage>
     <NavigationPage Title="购物" Icon="nav_shopping.png" >
-        <x:Arguments>
+        <x:Arguments NavigationPage.HasBackButton="false">
             <goods:GoodsHomePage />
         </x:Arguments>
     </NavigationPage>
     <NavigationPage  Title="消息" Icon="nav_message.png" > 
-        <x:Arguments>
-            <message:MessageHomePage />
+        <x:Arguments NavigationPage.TitleIcon="btn_more.png">
+            <message:MessageHomePage  />
         </x:Arguments>
     </NavigationPage>
     <NavigationPage  Title="我的" Icon="nav_myself.png" > 
-        <x:Arguments>
+        <x:Arguments >
             <myself:MyselfHomePage />
         </x:Arguments>
-    </NavigationPage>
+    </NavigationPage>-->
 
 </TabbedPage>
