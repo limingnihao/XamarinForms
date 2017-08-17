@@ -8,6 +8,8 @@ Xamarin练习项目，一个商城，交友平台。使用forms开发。可在io
 ## Page文件列表说明
 1. Welcome 欢迎页面。
 2. LoginMain 登录主页面。
+![](https://github.com/limingnihao/XamarinForms/blob/master/Printscreen/%E6%B3%A8%E5%86%8C.jpg)
+
 3. MobileLogin 手机号登录页面。
 4. MobileRegister 手机号注册页面。
 1. Goods 商品：列表、详情等
