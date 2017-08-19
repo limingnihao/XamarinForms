@@ -49,5 +49,14 @@
 	<array>
 		<true/>
 	</array>
+	<key>NSAllowsArbitraryLoads</key>
+	<true/>
+	<key>Allow Arbitray Loads</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>
