@@ -23,6 +23,8 @@ Xamarin练习项目，一个商城，交友平台。使用forms开发。可在io
 
 3. News 新闻：一个cms系统。
 ![](https://github.com/limingnihao/XamarinForms/blob/master/Printscreen/首页-新闻.jpg)
+![](https://github.com/limingnihao/XamarinForms/blob/master/Printscreen/新闻-详情.jpg)
+
 
 1. Goods 购物：列表、详情等
 ![](https://github.com/limingnihao/XamarinForms/blob/master/Printscreen/首页-购物.jpg)
