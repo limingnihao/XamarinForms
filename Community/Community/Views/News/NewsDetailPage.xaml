@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="Community.Views.News.NewsDetailPage" Title="新闻详情">
 	<ContentPage.Content>
-         <StackLayout>
-            <Label Text="新闻详情11111"/>
+        <StackLayout>
+            <Label Text="Loading..." IsVisible="false" x:Name="labelLoading" />
+            <WebView x:Name="webView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Navigated="webviewNavigated" Navigating="webviewNavigating" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

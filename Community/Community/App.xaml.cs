@@ -1,6 +1,7 @@
 ﻿using Xamarin.Forms;
 using Community.Views;
 using Community.Views.Message;
+using Community.Views.News;
 
 namespace Community
 {
@@ -14,11 +15,10 @@ namespace Community
             //Current.MainPage = new ChatPage();
             //Current.MainPage = new WelcomePage();
 
-            //NavigationPage main = new NavigationPage(new MainNavPage());
-			//Current.MainPage = main;
+            Current.MainPage = new NavigationPage(new MainNavPage()); ;
 
-			Current.MainPage = new NavigationPage(new MainLoginPage());
-
+            //Current.MainPage = new NavigationPage(new MainLoginPage());
+            //Current.MainPage = new NewsDetailPage();
 		}
 
         protected override void OnStart()

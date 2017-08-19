@@ -45,5 +45,9 @@
 	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>LaunchScreen</string>
+	<key>App Transport Security Settings</key>
+	<array>
+		<true/>
+	</array>
 </dict>
 </plist>

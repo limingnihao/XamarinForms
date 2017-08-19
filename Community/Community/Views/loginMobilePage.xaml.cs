@@ -29,7 +29,7 @@ namespace Community.Views
 			}
 		}
 
-        protected async void onLoginHandler(object sender, System.EventArgs e)
+        void onLoginHandler(object sender, System.EventArgs e)
         {
 			App.Current.MainPage = new NavigationPage(new MainNavPage());
 		}

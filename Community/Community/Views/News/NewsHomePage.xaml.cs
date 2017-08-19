@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Threading.Tasks;
+using Community.Beans;
 using Community.Helps;
-using Community.Models;
 using Community.Services;
-using Community.Views.Message;
 using Xamarin.Forms;
 
 namespace Community.Views.News
@@ -15,39 +13,58 @@ namespace Community.Views.News
         private LogHelp logger = DependencyService.Get<LogHelp>().setName("NewsHomePage");
 		private NewsService newsService = null;
 
-		private ObservableCollection<NewsListBean> newsList { get; set; }
+	    private ObservableCollection<NewsItemBean> newsList;
 
-        private string type = "top";
+        private string defaultNewsType = "news_hot";
 
 		public NewsHomePage()
         {
             InitializeComponent();
             this.newsService = NewsService.GetInstance();
-            this.newsList = new ObservableCollection<NewsListBean>();
+            this.newsList = new ObservableCollection<NewsItemBean>();
             this.listView.ItemsSource = this.newsList;
 			this.listView.ItemSelected += this.onSelectionHandler;
-            this.listView.RefreshCommand = new CommandHelp<NewsListBean>(p=>this.onRefreshHandler(), null);
-            this.setTypeView();
+            this.listView.RefreshCommand = new CommandHelp<NewsItemBean>(p=>this.onRefreshHandler(), null);
+
+            this.newsList.Add(new NewsItemBean { Title = "我这行好长一些，好看见他可以换行啊，应该够长了吧，我觉得而已了，那就这样吧。", Source="你好", Datetime="2019-01-01", IsImage = false, IsText = false, IsThird=true, Image1="Background_1.png", Image2= "Background_3.png", Image3= "Background_2.png" });
+			this.newsList.Add(new NewsItemBean { Title = "我这行好长一些，好看见他可以换行啊，应该够长了吧，我觉得而已了，那就这样吧。", Image = "head1.jpg", IsImage=true, IsText=false });
+			this.newsList.Add(new NewsItemBean { Title = "我这行好长一些，好看见他可以换行啊，应该够长了吧，我觉得而已了，那就这样吧。", IsImage = false, IsText = true });
+			this.newsList.Add(new NewsItemBean { Title = "那就这样吧。", Image = "bg_tools.png", IsImage = true, IsText = false });
+			this.newsList.Add(new NewsItemBean { Title = "比气体", Image = "Background_1.png", IsImage = true, IsText = false });
+			this.newsList.Add(new NewsItemBean { Title = "比气体", Image = "head1.jpg", IsImage = true, IsText = false });
+			this.newsList.Add(new NewsItemBean { Title = "比气体", Image = "Background_1.png", IsImage = true, IsText = false });
+
+			this.newsList.Add(new NewsItemBean { Title = "比气体", Image = "head2.jpg", IsImage = true, IsText = false });
+			this.setTypeView();
 		}
 
         protected void setTypeView(){
             IList<NewsTypeBean> list = new List<NewsTypeBean>();
-            list.Add(new NewsTypeBean { name = "热点", code = "top" });
-			list.Add(new NewsTypeBean { name = "社会", code = "shehui" });
-			list.Add(new NewsTypeBean { name = "国内", code = "guonei" });
-			list.Add(new NewsTypeBean { name = "国际", code = "guoji" });
-			list.Add(new NewsTypeBean { name = "娱乐", code = "yule" });
-			list.Add(new NewsTypeBean { name = "体育", code = "tiyu" });
-			list.Add(new NewsTypeBean { name = "军事", code = "junshi" });
-			list.Add(new NewsTypeBean { name = "科技", code = "keji" });
-			list.Add(new NewsTypeBean { name = "财经", code = "caijing" });
-			list.Add(new NewsTypeBean { name = "时尚", code = "shishang" });
-            foreach(NewsTypeBean b in list){
+            list.Add(new NewsTypeBean { Name = "热点", Code = "news_hot" });
+			list.Add(new NewsTypeBean { Name = "社会", Code = "news_society" });
+			list.Add(new NewsTypeBean { Name = "美食", Code = "news_food" });
+			list.Add(new NewsTypeBean { Name = "国际", Code = "news_world" });
+			list.Add(new NewsTypeBean { Name = "娱乐", Code = "news_entertainment" });
+			list.Add(new NewsTypeBean { Name = "体育", Code = "news_sports" });
+			list.Add(new NewsTypeBean { Name = "军事", Code = "news_military" });
+			list.Add(new NewsTypeBean { Name = "科技", Code = "news_tech" });
+			list.Add(new NewsTypeBean { Name = "财经", Code = "news_finance" });
+			list.Add(new NewsTypeBean { Name = "时尚", Code = "news_fashion" });
+			list.Add(new NewsTypeBean { Name = "游戏", Code = "news_game" });
+			list.Add(new NewsTypeBean { Name = "探索", Code = "news_discovery" });
+			list.Add(new NewsTypeBean { Name = "美文", Code = "news_essay" });
+			list.Add(new NewsTypeBean { Name = "历史", Code = "news_history" });
+			list.Add(new NewsTypeBean { Name = "汽车", Code = "news_car" });
+			list.Add(new NewsTypeBean { Name = "组图", Code = "组图" });
+			list.Add(new NewsTypeBean { Name = "历史", Code = "news_history" });
+			list.Add(new NewsTypeBean { Name = "历史", Code = "news_history" });
+
+			foreach(NewsTypeBean b in list){
                 Button button = new Button();
-                button.Text = b.name;
+                button.Text = b.Name;
                 button.Margin = new Thickness(5, 0, 0, 0);
                 button.BackgroundColor = Color.Transparent;
-                if(b.code.Equals("top")){
+                if(b.Code.Equals(this.defaultNewsType)){
 					button.TextColor = Color.Red;
                 }else{
 					button.TextColor = Color.Black;
@@ -62,8 +79,9 @@ namespace Community.Views.News
 
         private void onTypeRefreshHandler(NewsTypeBean p)
         {
-            logger.info("onTypeRefreshHandler - " + p.name + ", " + p.code);
-            this.type = p.code;
+            logger.info("onTypeRefreshHandler - " + p.Name + ", " + p.Code);
+            this.defaultNewsType = p.Code;
+            this.newsList.Clear();
             this.listView.BeginRefresh();
 		}
 
@@ -86,11 +104,10 @@ namespace Community.Views.News
 			{
 				return;
 			}
-            this.listView.SelectedItem = null;
-            NewsDetailPage detailPage = new NewsDetailPage();
+            NewsDetailPage detailPage = new NewsDetailPage(e.SelectedItem as NewsItemBean);
             NavigationPage.SetBackButtonTitle(detailPage, "返回");
 			await this.Navigation.PushAsync(detailPage);
-
+			this.listView.SelectedItem = null;
 		}
 
         /// <summary>
@@ -107,12 +124,13 @@ namespace Community.Views.News
         /// </summary>
         async private void getNewsList(){
             double now = DateTime.Now.Subtract(DateTime.Parse("1970-1-1")).TotalSeconds;
-            ResultBean<IList<NewsListBean>> rb = await this.newsService.GetNewsList((long)now, this.type);
-            logger.info("---getNewsList----get---, type=" + this.type + ", msg=" + rb.Message);
+            ResultBean<IList<NewsItemBean>> rb = await this.newsService.GetToutiaoList((long)now, this.defaultNewsType);
+            logger.info("---getNewsList----get---, type=" + this.defaultNewsType + ", msg=" + rb.Message);
             if(rb.Success){
 				this.newsList.Clear();
-				foreach (NewsListBean bean in rb.Data)
+				foreach (NewsItemBean bean in rb.Data)
 				{
+                    logger.info("getNewsList - add - " + bean);
 					this.newsList.Add(bean);
 				}
 			}
@@ -123,8 +141,8 @@ namespace Community.Views.News
 
 
     class NewsTypeBean{
-        public string name { get; set; }
-        public string code { get; set; }
+        public string Name { get; set; }
+        public string Code { get; set; }
     }
 
 }

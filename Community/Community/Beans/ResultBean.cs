@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Community.Models
+namespace Community.Beans
 {
     public class ResultBean<T>
     {

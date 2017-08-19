@@ -10,7 +10,7 @@ namespace Community.Helps
     public class HttpHelp
     {
 
-		private static LogHelp logger = DependencyService.Get<LogHelp>();
+        private static LogHelp logger = DependencyService.Get<LogHelp>().setName("HttpHelp");
 
         private static HttpHelp HTTP_HELP = null;
 
@@ -37,25 +37,31 @@ namespace Community.Helps
 
         public async Task<string> Get(String url)
 		{
-            Uri uri = new Uri(url);
-            HttpWebRequest req = WebRequest.CreateHttp(uri);
-            req.Method = "GET";
-            //req.ContentType = CONTENT_TYPE_PLAIN;
-            //req.ContinueTimeout = TIME_OUT_HTTP;
-            WebResponse res = await req.GetResponseAsync();
-            Stream input = res.GetResponseStream();
-			byte[] buffer = new byte[16 * 1024];
-			using (MemoryStream ms = new MemoryStream())
-			{
-				int read;
-				while ((read = input.Read(buffer, 0, buffer.Length)) > 0)
+            try{
+				Uri uri = new Uri(url);
+				HttpWebRequest req = WebRequest.CreateHttp(uri);
+				req.Method = "POST";
+				//req.ContentType = CONTENT_TYPE_PLAIN;
+				//req.ContinueTimeout = TIME_OUT_HTTP;
+				WebResponse res = await req.GetResponseAsync();
+				Stream input = res.GetResponseStream();
+				byte[] buffer = new byte[16 * 1024];
+				using (MemoryStream ms = new MemoryStream())
 				{
-				    ms.Write(buffer, 0, read);
+					int read;
+					while ((read = input.Read(buffer, 0, buffer.Length)) > 0)
+					{
+						ms.Write(buffer, 0, read);
+					}
+					byte[] results = ms.ToArray();
+					String str = System.Text.Encoding.UTF8.GetString(results, 0, results.Length);
+					return str;
 				}
-				byte[] results = ms.ToArray();
-				String str = System.Text.Encoding.UTF8.GetString(results, 0, results.Length);
-				return str;
-			}
+			} catch(Exception e){
+                logger.info("Get erro - url=" + url + ", message=" + e.Message);
+                logger.info(e.StackTrace);
+            }
+            return "";
 		}
 
 

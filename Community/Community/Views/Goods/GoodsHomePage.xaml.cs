@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using Community.Beans;
 using Community.Helps;
 using Community.Models;
 using Community.Services;

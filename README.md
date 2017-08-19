@@ -3,7 +3,7 @@
 # XamarinForms笔记
 
 ## Community项目
-Xamarin练习项目，一个商城，交友平台。使用forms开发。可在ios和android上运行。2017年7月29日。作者：黎明你好，qq：87914111。
+Xamarin练习项目，一个商城，交友平台。使用forms开发。可在ios和android上运行。2017年7月29日。作者：黎明你好，qq：87914111。https://github.com/limingnihao/XamarinForms
 
 ### 需要增加一个NuGet的源，因为我用了forms3.0的版本。
 在“首选项->NuGet->源”里增加一个 https://www.myget.org/F/xamarinforms-dev/api/v3/index.json
@@ -11,10 +11,9 @@ Xamarin练习项目，一个商城，交友平台。使用forms开发。可在io
 
 ### Page文件列表说明
 1. Welcome 欢迎页面。
-![](https://github.com/limingnihao/XamarinForms/blob/master/Printscreen/登录1.jpg)
 
 2. LoginMain 登录主页面。
-![](https://github.com/limingnihao/XamarinForms/blob/master/Printscreen/%E6%B3%A8%E5%86%8C.jpg)
+![](https://github.com/limingnihao/XamarinForms/blob/master/Printscreen/登录1.jpg)
 
 3. MobileLogin 手机号登录页面。
 ![](https://github.com/limingnihao/XamarinForms/blob/master/Printscreen/登录2.jpg)

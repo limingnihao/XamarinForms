@@ -3,40 +3,42 @@
              x:Class="Community.Views.Myself.MyselfHomePage"
              Title="我的" BackgroundColor="#E2DFED" >
 	<ContentPage.Content>
-         <StackLayout>
-            <StackLayout HeightRequest="75" Margin="0,15,0,0" BackgroundColor="White" Orientation="Horizontal">
-                <Image Margin="10" WidthRequest="60" HeightRequest="65" Aspect="AspectFit" Source="http://pic7.nipic.com/20100520/4672667_202100016713_2.jpg" />
-                <StackLayout Margin="0,0,10,0" Orientation="Vertical" VerticalOptions="Center">
-                    <Label TextColor="Black" LineBreakMode="TailTruncation" FontSize="14" FontAttributes="Bold" Text="黎明你好" />
-                    <Label TextColor="Gray" LineBreakMode="TailTruncation" FontSize="12" FontAttributes="None" Text="账号：13423232323" />
+        <ScrollView>
+            <StackLayout>
+                <StackLayout HeightRequest="75" Margin="0,15,0,0" BackgroundColor="White" Orientation="Horizontal">
+                    <Image Margin="10" WidthRequest="60" HeightRequest="65" Aspect="AspectFit" Source="http://pic7.nipic.com/20100520/4672667_202100016713_2.jpg" />
+                    <StackLayout Margin="0,0,10,0" Orientation="Vertical" VerticalOptions="Center">
+                        <Label TextColor="Black" LineBreakMode="TailTruncation" FontSize="14" FontAttributes="Bold" Text="黎明你好" />
+                        <Label TextColor="Gray" LineBreakMode="TailTruncation" FontSize="12" FontAttributes="None" Text="账号：13423232323" />
+                    </StackLayout>
+                    <Label Margin="0,0,10,0" TextColor="Gray" LineBreakMode="TailTruncation" FontSize="15" FontAttributes="None" Text=">" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
                 </StackLayout>
-                <Label Margin="0,0,10,0" TextColor="Gray" LineBreakMode="TailTruncation" FontSize="15" FontAttributes="None" Text=">" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
-            </StackLayout>
 
-            <StackLayout HeightRequest="44" Margin="0,10,0,0" BackgroundColor="White" Orientation="Horizontal">
-                <Image Margin="10" WidthRequest="32" Source="icon_order.png" Aspect="AspectFill" />
-                <Label TextColor="Black"  FontSize="14" VerticalOptions="Center" Text="我的订单" />
-                <Label Margin="0,0,10,0" TextColor="Gray" LineBreakMode="TailTruncation" FontSize="15" FontAttributes="None" Text=">" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
-            </StackLayout>
+                <StackLayout HeightRequest="44" Margin="0,10,0,0" BackgroundColor="White" Orientation="Horizontal">
+                    <Image Margin="10" WidthRequest="32" Source="icon_order.png" Aspect="AspectFill" />
+                    <Label TextColor="Black"  FontSize="14" VerticalOptions="Center" Text="我的订单" />
+                    <Label Margin="0,0,10,0" TextColor="Gray" LineBreakMode="TailTruncation" FontSize="15" FontAttributes="None" Text=">" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                </StackLayout>
 
-             <StackLayout HeightRequest="44" Margin="0,10,0,0" BackgroundColor="White" Orientation="Horizontal">
-                <Image Margin="10" WidthRequest="32" Source="icon_favorite" Aspect="AspectFill" />
-                <Label TextColor="Black"  FontSize="14" VerticalOptions="Center" Text="我的收藏" />
-                <Label Margin="0,0,10,0" TextColor="Gray" LineBreakMode="TailTruncation" FontSize="15" FontAttributes="None" Text=">" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
-            </StackLayout>
+                 <StackLayout HeightRequest="44" Margin="0,10,0,0" BackgroundColor="White" Orientation="Horizontal">
+                    <Image Margin="10" WidthRequest="32" Source="icon_favorite" Aspect="AspectFill" />
+                    <Label TextColor="Black"  FontSize="14" VerticalOptions="Center" Text="我的收藏" />
+                    <Label Margin="0,0,10,0" TextColor="Gray" LineBreakMode="TailTruncation" FontSize="15" FontAttributes="None" Text=">" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                </StackLayout>
 
-             <StackLayout HeightRequest="44" Margin="0,10,0,0" BackgroundColor="White" Orientation="Horizontal">
-                <Image Margin="10" WidthRequest="32" Source="icon_suggest" Aspect="AspectFill" />
-                <Label TextColor="Black"  FontSize="14" VerticalOptions="Center" Text="意见反馈" />
-                <Label Margin="0,0,10,0" TextColor="Gray" LineBreakMode="TailTruncation" FontSize="15" FontAttributes="None" Text=">" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
-            </StackLayout>
+                 <StackLayout HeightRequest="44" Margin="0,10,0,0" BackgroundColor="White" Orientation="Horizontal">
+                    <Image Margin="10" WidthRequest="32" Source="icon_suggest" Aspect="AspectFill" />
+                    <Label TextColor="Black"  FontSize="14" VerticalOptions="Center" Text="意见反馈" />
+                    <Label Margin="0,0,10,0" TextColor="Gray" LineBreakMode="TailTruncation" FontSize="15" FontAttributes="None" Text=">" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                </StackLayout>
 
-             <StackLayout HeightRequest="44" Margin="0,10,0,0" BackgroundColor="White" Orientation="Horizontal">
-                <Image Margin="10" WidthRequest="32" Source="icon_setting" Aspect="AspectFill" />
-                <Label TextColor="Black"  FontSize="14" VerticalOptions="Center" Text="设置" />
-                <Label Margin="0,0,10,0" TextColor="Gray" LineBreakMode="TailTruncation" FontSize="15" FontAttributes="None" Text=">" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
-            </StackLayout>
+                 <StackLayout HeightRequest="44" Margin="0,10,0,0" BackgroundColor="White" Orientation="Horizontal">
+                    <Image Margin="10" WidthRequest="32" Source="icon_setting" Aspect="AspectFill" />
+                    <Label TextColor="Black"  FontSize="14" VerticalOptions="Center" Text="设置" />
+                    <Label Margin="0,0,10,0" TextColor="Gray" LineBreakMode="TailTruncation" FontSize="15" FontAttributes="None" Text=">" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                </StackLayout>
 
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
 	</ContentPage.Content>
 </ContentPage>

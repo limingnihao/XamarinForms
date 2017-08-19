@@ -10,9 +10,9 @@
                 <!--  <SearchBar x:Name="searchBar" FontSize="12" Placeholder="请输入搜索内容" />  -->
 
 	<ContentPage.Content>
-        <Grid >
+        <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="40"/>
+                <RowDefinition Height="30"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" VerticalOptions="Fill">
@@ -20,11 +20,10 @@
                 <StackLayout Orientation="Horizontal">
                     <Label Margin="10,0,0,0" Text="综合" TextColor="White" FontSize="14" VerticalOptions="Center" />
                     <Label Margin="10,0,0,0" Text="销量" TextColor="White" FontSize="14" VerticalOptions="Center" />
-                    <toolkit:CheckBox x:Name="checkType" OnImage="check_list_0.png"  OffImage="check_list_1.png" HorizontalOptions="EndAndExpand" CheckedChanged="switchHandler"/>
+                    <toolkit:CheckBox x:Name="checkType" Margin="0,0,10,0" HorizontalOptions="EndAndExpand" OnImage="check_list_0.png"  OffImage="check_list_1.png" CheckedChanged="switchHandler"/>
                 </StackLayout>
             </Grid>
-            <ListView x:Name="listView" Grid.Row="1" BackgroundColor="#E2DFED" RefreshAllowed="true" IsPullToRefreshEnabled="true" SeparatorVisibility="None" >
-            </ListView>
+            <ListView x:Name="listView" Grid.Row="1" BackgroundColor="#E2DFED" RefreshAllowed="true" IsPullToRefreshEnabled="true" SeparatorVisibility="None" />
         </Grid>
 	</ContentPage.Content>
 </ContentPage>

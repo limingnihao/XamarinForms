@@ -12,7 +12,7 @@ namespace Community.Views
             InitializeComponent();
         }
 
-        async void onRegisterHandler(object sender, System.EventArgs e)
+        void onRegisterHandler(object sender, System.EventArgs e)
         {
 			App.Current.MainPage = new NavigationPage(new MainNavPage());
 		}
