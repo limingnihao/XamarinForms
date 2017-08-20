@@ -29,6 +29,8 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+
+                <!-- 地排按钮和输入框 -->
                 <StackLayout>
                     <StackLayout Padding="5,5,5,0" BackgroundColor="#F2F1F4" HeightRequest="50" Orientation="Horizontal" VerticalOptions="EndAndExpand">
                         <Button Image="btn_voice.png"/>
@@ -37,7 +39,8 @@
                         <Button Image="btn_more.png" Clicked="moreClickHandler"/>
                     </StackLayout>
                 </StackLayout>
-               
+
+                <!-- 更多 -->
                 <StackLayout x:Name="layoutMore" IsVisible="false" BackgroundColor="Aqua" HeightRequest="200">
                                     
                 </StackLayout>

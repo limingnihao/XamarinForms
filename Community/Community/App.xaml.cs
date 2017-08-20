@@ -11,14 +11,18 @@ namespace Community
         {
             InitializeComponent();
 
-            //Current.MainPage = new MainNavPage();
-            //Current.MainPage = new ChatPage();
-            //Current.MainPage = new WelcomePage();
+            //单独调试页面
+			//Current.MainPage = new MainNavPage();
+			//Current.MainPage = new ChatPage();
+			//Current.MainPage = new WelcomePage();
+			//Current.MainPage = new FriendPage();
 
-            Current.MainPage = new NavigationPage(new MainNavPage()); ;
+            //正式运行
+			//MainLoginPage page = new MainLoginPage);
 
-            //Current.MainPage = new NavigationPage(new MainLoginPage());
-            //Current.MainPage = new NewsDetailPage();
+			MainNavPage page = new MainNavPage();
+			NavigationPage.SetBackButtonTitle(page, "");
+			Current.MainPage = new NavigationPage(page);
 		}
 
         protected override void OnStart()

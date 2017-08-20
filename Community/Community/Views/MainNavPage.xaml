@@ -4,9 +4,7 @@
             xmlns:goods="clr-namespace:Community.Views.Goods"
             xmlns:message="clr-namespace:Community.Views.Message"
             xmlns:myself="clr-namespace:Community.Views.Myself" 
-            x:Class="Community.Views.MainNavPage"
-            IsInNativeLayout="false"
-    >
+            x:Class="Community.Views.MainNavPage">
     <news:NewsHomePage        Title="新闻" Icon="nav_news.png"/>
     <goods:GoodsHomePage      Title="购物" Icon="nav_shopping.png"/>
     <message:MessageHomePage  Title="消息" Icon="nav_message.png" />

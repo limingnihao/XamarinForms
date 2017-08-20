@@ -2,13 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
              x:Class="Community.Views.Message.MessageHomePage"
-             Title="消息" Padding="0,5,0,0">
+             Title="消息">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="好友"/>
+        <ToolbarItem Text="好友" Clicked="gotofriendHandler" />
     </ContentPage.ToolbarItems>
-	 <ContentPage.Content>
-        <ListView x:Name="listView" RowHeight="60" 
-                  RefreshAllowed="true" IsPullToRefreshEnabled="true" SeparatorVisibility="Default" SeparatorColor="Green">
+
+	<ContentPage.Content>
+        <ListView x:Name="listView" RowHeight="60" ItemSelected="onSelectionHandler" 
+                  RefreshAllowed="true" IsPullToRefreshEnabled="true" SeparatorVisibility="Default" SeparatorColor="#e8e8e8">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -22,7 +23,7 @@
                                 <Label TextColor="Black" LineBreakMode="TailTruncation" FontSize="16" FontAttributes="Bold" Text="{Binding Nickname}" />
                                 <Label TextColor="Gray" LineBreakMode="TailTruncation" FontSize="12" FontAttributes="None" Text="{Binding Message}" />
                             </StackLayout>
-                            <Label Margin="0,0,10,0" TextColor="Gray" LineBreakMode="TailTruncation" FontSize="15" FontAttributes="None" Text="{Binding LastTime}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                            <Label Margin="0,0,10,0" TextColor="Gray" LineBreakMode="TailTruncation" FontSize="13" FontAttributes="None" Text="{Binding LastTime}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

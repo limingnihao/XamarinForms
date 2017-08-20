@@ -104,9 +104,7 @@ namespace Community.Views.News
 			{
 				return;
 			}
-            NewsDetailPage detailPage = new NewsDetailPage(e.SelectedItem as NewsItemBean);
-            NavigationPage.SetBackButtonTitle(detailPage, "返回");
-			await this.Navigation.PushAsync(detailPage);
+			await this.Navigation.PushAsync(new NewsDetailPage(e.SelectedItem as NewsItemBean));
 			this.listView.SelectedItem = null;
 		}
 

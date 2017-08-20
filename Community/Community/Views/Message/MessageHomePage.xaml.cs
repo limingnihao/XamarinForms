@@ -9,14 +9,12 @@ namespace Community.Views.Message
     {
 		private LogHelp logger = DependencyService.Get<LogHelp>().setName("MessageHomePage");
 
-		public ObservableCollection<MessageListBean> messageList { get; set; }
+        private ObservableCollection<MessageListBean> messageList = new ObservableCollection<MessageListBean>();
 
 		public MessageHomePage()
         {
             InitializeComponent();
-			this.messageList = new ObservableCollection<MessageListBean>();
 			this.listView.ItemsSource = this.messageList;
-			this.listView.ItemSelected += this.onSelectionHandler;
 			this.messageList.Add(new MessageListBean { Nickname = "周杰伦", Message = "下午来看我的演唱会吧", LastTime = "2017-05-05 12:12:12", HeadImg = "http://img.qqzhi.com/upload/img_2_2807906048D2523014482_23.jpg" });
 			this.messageList.Add(new MessageListBean { Nickname = "蔡依林", Message = "我要参加真人秀了", LastTime = "5分钟前", HeadImg = "https://gss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D600%2C800/sign=acb66ec874c6a7efb973a020cdca8369/6a600c338744ebf851ebaf28dbf9d72a6059a70b.jpg" });
 			this.messageList.Add(new MessageListBean { Nickname = "漩涡鸣人", Message = "螺旋丸发射", LastTime = "三天前", HeadImg = "http://www.qqzhi.com/uploadpic/2015-01-19/184557866.jpg" });
@@ -24,7 +22,7 @@ namespace Community.Views.Message
 
 		}
 
-		private void unreadHandler(object sender, System.EventArgs e)
+		void unreadHandler(object sender, System.EventArgs e)
 		{
 			var mi = ((MenuItem)sender);
 			DisplayAlert("More Context Action", mi.CommandParameter + " more context action", "OK");
@@ -32,7 +30,7 @@ namespace Community.Views.Message
 			logger.info("unreadHandler" + sender);
 		}
 
-		private void deleteHandler(object sender, System.EventArgs e)
+		void deleteHandler(object sender, System.EventArgs e)
 		{
 			var mi = ((MenuItem)sender);
             var index = 0;
@@ -52,15 +50,23 @@ namespace Community.Views.Message
 		/// <summary>
 		/// 选择一条
 		/// </summary>
-		async private void onSelectionHandler(object sender, SelectedItemChangedEventArgs e)
+		async void onSelectionHandler(object sender, SelectedItemChangedEventArgs e)
 		{
+            logger.info("onSelectionHandler - " + e.SelectedItem);
 			if (e.SelectedItem == null)
 			{
 				return;
 			}
+			await Navigation.PushAsync(new ChatPage());
 			this.listView.SelectedItem = null;
-            await Navigation.PushAsync(new ChatPage());
 		}
 
+        /// <summary>
+        /// 好友列表
+        /// </summary>
+        async void gotofriendHandler(object sender, System.EventArgs e)
+        {
+			await Navigation.PushAsync(new FriendPage());
+		}
     }
 }

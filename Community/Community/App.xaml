@@ -15,6 +15,10 @@
                 <Setter Property="BarTextColor" Value="White" />
             </Style>-->
 
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+            </Style>
+            
             <!-- 提示框 - 登录注册使用 -->
             <Style x:Key="label_login" TargetType="Label">
                 <Setter Property="HorizontalOptions" Value="Center" />
