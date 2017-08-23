@@ -8,9 +8,7 @@ Xamarin练习项目，一个商城，交友平台。使用forms开发。可在io
 | 作者    | qq    | git | 博客 |
 | ------- | :-: | :-: | :-: |
 | ![](https://avatars0.githubusercontent.com/u/14088783?v=4&s=60 ) 黎明你好| 87914111 | https://github.com/limingnihao | http://limingnihao.iteye.com https://my.oschina.net/limingnihao | 
-| ![](https://avatars2.githubusercontent.com/u/30405636?v=4&s=60) Asshole | 941623975 | https://github.com/JiBinXiao |  |
-
-     
+| Asshole | 941623975 | https://github.com/JiBinXiao |  |
 
 ### 需要增加一个NuGet的源，因为我用了forms3.0的版本。
 在“首选项->NuGet->源”里增加一个 https://www.myget.org/F/xamarinforms-dev/api/v3/index.json
