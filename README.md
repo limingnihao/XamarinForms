@@ -3,16 +3,27 @@
 # XamarinForms笔记
 
 ## Community项目
-Xamarin练习项目，一个商城，交友平台。使用forms开发。可在ios和android上运行。2017年7月29日。
+Xamarin练习项目，一个资讯、商城，交友平台。使用forms开发。可在ios和android上运行。2017年7月29日。
 
-| 作者    | qq    | git | 博客 |
-| ------- | :-: | :-: | :-: |
-| ![](https://avatars0.githubusercontent.com/u/14088783?v=4&s=60 ) 黎明你好| 87914111 | https://github.com/limingnihao | http://limingnihao.iteye.com https://my.oschina.net/limingnihao | 
+| 作者   | qq  | git | 博客 |
+| :---: | :-: | :-: | :-: |
+| 黎明你好 ![](https://avatars0.githubusercontent.com/u/14088783?v=4&s=60 ) | 87914111 | https://github.com/limingnihao | http://limingnihao.iteye.com https://my.oschina.net/limingnihao | 
 | Asshole | 941623975 | https://github.com/JiBinXiao |  |
 
-### 需要增加一个NuGet的源，因为我用了forms3.0的版本。
-在“首选项->NuGet->源”里增加一个 https://www.myget.org/F/xamarinforms-dev/api/v3/index.json
+### 招募开源项目参与者：
+### 本项目想做成一个xamarin框架下的在ios和andriod下跨平台的app，后面想把这个app做上线。
 
+####主要功能列表和涉及的技术点如下：
+1. 资讯：本地数据库缓存+http请求 + 微信、qq、微博分享，数据暂时来自今日头条PC版。
+2. 电商：restful接口 + 微信、支付宝支付功能，电商数据待定来源(比如千米)。
+3. 消息：地图位置、xmpp通讯，发送文本、表情、文件、图片，图片的预览，好友功能、群功能等。
+4. 社区：交话费、水电燃气费，查天气，查违章，查快递、预约挂号、预约快递、会员购买等等，对接第三方接口，比如使用聚合、百度接口。功能可以无限扩展。
+5. 广告：可以接入goog广告等。
+
+#### 人员要求：
+1. 对xamarin有浓厚的兴趣。
+2. 最好有android、ios开发经验。
+3. 有分享精神，好说话，不为利益。
 
 ### Page文件列表说明
 1. Welcome 欢迎页面。
@@ -47,6 +58,10 @@ Xamarin练习项目，一个商城，交友平台。使用forms开发。可在io
 
 --------------------
 # Xamarin开发笔记 - 目录
+
+### 要使用forms3.0的版本，需增加一个NuGet的源。
+在“首选项->NuGet->源”里增加一个 https://www.myget.org/F/xamarinforms-dev/api/v3/index.json
+
 ### 1.1介绍
 1. 环境搭建(macOS)
 2. 创建第一个forms程序
