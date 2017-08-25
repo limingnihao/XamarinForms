@@ -31,4 +31,7 @@
 		mapView.MapType = BMKMapType.BMKMapTypeStandard;
        View.AddSubview(mapView);
 	`
+![](https://github.com/limingnihao/XamarinForms/blob/master/Printscreen/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE-ios.jpg)
+
+
 ## android
