@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{27970AD4-A6D3-43AE-B567-7FE55B75CA20}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>iOSBaiduMap</RootNamespace>
+    <AssemblyName>iOSBaiduMap</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>60617</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IOSDebuggerPort>48807</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\a\CustomIndex" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\a\DVDirectory.cfg" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\a\DVHotMap.cfg" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\a\DVHotcity.cfg" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\a\DVSDirectory.cfg" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\a\DVStreet.cfg" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\a\DVVersion.cfg" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\a\street.sty" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\a\mode_1\bus.sty" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\a\mode_1\car.sty" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\a\mode_1\cycle.sty" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\a\mode_1\map.rs" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\a\mode_1\map.sty" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\a\mode_1\reduct.rs" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\a\mode_1\reduct.sty" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\a\mode_1\traffic.rs" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\a\mode_1\traffic.sty" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\a\mode_2\map.sty" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\a\mode_4\map.rs" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\a\mode_4\map.sty" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\idrres\DVIndoor.cfg" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\idrres\ResPackIndoorMap.rs" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\files\cfg\idrres\baseindoormap.sty" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\baidumap_logo.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\baidumap_logo%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\bnavi_icon_location_fixed.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\bnavi_icon_location_fixed%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\direction_wheel.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\direction_wheel%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_action_paopao_middle_left.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_action_paopao_middle_left%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_action_paopao_middle_left_highlighted.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_action_paopao_middle_left_highlighted%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_action_paopao_middle_right.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_action_paopao_middle_right%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_action_paopao_middle_right_highlighted.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_action_paopao_middle_right_highlighted%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_cellphone.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_cellphone2.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_cellphone2%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_cellphone%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_center_point.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_center_point%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_compass.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_compass%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_compass_background.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_compass_background%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_direction.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_direction%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_line_nofocus.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_nav_bus.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_nav_bus%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_nav_end.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_nav_end%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_nav_rail.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_nav_rail%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_nav_start.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_nav_start%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_nav_waypoint.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_nav_waypoint%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_paopao_middle_left.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_paopao_middle_left%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_paopao_middle_left_highlighted.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_paopao_middle_left_highlighted%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_paopao_middle_right.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_paopao_middle_right%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_paopao_middle_right_highlighted.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\icon_paopao_middle_right_highlighted%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\lineDashTexture.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\line_texture.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\pin_green.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\pin_green%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\pin_purple.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\pin_purple%402x.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\pin_red.png" />
+    <ImageAsset Include="Assets.xcassets\mapapi.bundle\images\pin_red%402x.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="CustomViewController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\a\CustomIndex" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\a\DVDirectory.cfg" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\a\DVHotMap.cfg" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\a\DVHotcity.cfg" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\a\DVSDirectory.cfg" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\a\DVStreet.cfg" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\a\DVVersion.cfg" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\a\street.sty" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\a\mode_1\bus.sty" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\a\mode_1\car.sty" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\a\mode_1\cycle.sty" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\a\mode_1\map.rs" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\a\mode_1\map.sty" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\a\mode_1\reduct.rs" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\a\mode_1\reduct.sty" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\a\mode_1\traffic.rs" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\a\mode_1\traffic.sty" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\a\mode_2\map.sty" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\a\mode_4\map.rs" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\a\mode_4\map.sty" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\idrres\DVIndoor.cfg" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\idrres\ResPackIndoorMap.rs" />
+    <BundleResource Include="Resources\mapapi.bundle\files\cfg\idrres\baseindoormap.sty" />
+    <BundleResource Include="Resources\mapapi.bundle\images\baidumap_logo.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\baidumap_logo%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\bnavi_icon_location_fixed.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\bnavi_icon_location_fixed%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\direction_wheel.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\direction_wheel%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_action_paopao_middle_left.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_action_paopao_middle_left%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_action_paopao_middle_left_highlighted.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_action_paopao_middle_left_highlighted%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_action_paopao_middle_right.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_action_paopao_middle_right%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_action_paopao_middle_right_highlighted.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_action_paopao_middle_right_highlighted%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_cellphone.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_cellphone2.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_cellphone2%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_cellphone%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_center_point.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_center_point%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_compass.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_compass%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_compass_background.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_compass_background%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_direction.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_direction%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_line_nofocus.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_nav_bus.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_nav_bus%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_nav_end.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_nav_end%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_nav_rail.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_nav_rail%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_nav_start.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_nav_start%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_nav_waypoint.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_nav_waypoint%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_paopao_middle_left.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_paopao_middle_left%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_paopao_middle_left_highlighted.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_paopao_middle_left_highlighted%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_paopao_middle_right.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_paopao_middle_right%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_paopao_middle_right_highlighted.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\icon_paopao_middle_right_highlighted%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\lineDashTexture.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\line_texture.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\pin_green.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\pin_green%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\pin_purple.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\pin_purple%402x.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\pin_red.png" />
+    <BundleResource Include="Resources\mapapi.bundle\images\pin_red%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Library.Map.Baidu.iOS\Library.Map.Baidu.iOS.csproj">
+      <Project>{D65F4ED8-D24F-4445-AEAD-E6695CDE3BB8}</Project>
+      <Name>Library.Map.Baidu.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

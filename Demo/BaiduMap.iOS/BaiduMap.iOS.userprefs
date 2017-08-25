@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{27970AD4-A6D3-43AE-B567-7FE55B75CA20}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Library.Map.Baidu.iOS/Bindings/BaiduMapAPI_Base_Type.cs">
+    <Files>
+      <File FileName="Library.Map.Baidu.iOS/Bindings/BaiduMapAPI_Base_Type.cs" Line="12" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.iOSBaiduMap PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.E5D34029-C611-4349-B30B-06CDC4D43098">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam />
+  </MonoDevelop.Ide.ItemProperties.iOSBaiduMap>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
