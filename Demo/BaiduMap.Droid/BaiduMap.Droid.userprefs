@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{71D8A6B5-54F8-4F42-BBAD-2B3B340545B6}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BaiduMap.Droid" expanded="True">
+            <Node name="androidMap" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.androidMap AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.69P0216115005482" />
+  <MultiItemStartupConfigurations />
+</Properties>
