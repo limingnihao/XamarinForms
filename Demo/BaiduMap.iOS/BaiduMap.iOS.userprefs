@@ -1,7 +1,9 @@
 ﻿<Properties StartupConfiguration="{27970AD4-A6D3-43AE-B567-7FE55B75CA20}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Library.Map.Baidu.iOS/Bindings/BaiduMapAPI_Base_Type.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOSBaiduMap/CustomViewController.cs">
     <Files>
       <File FileName="Library.Map.Baidu.iOS/Bindings/BaiduMapAPI_Base_Type.cs" Line="12" Column="5" />
+      <File FileName="iOSBaiduMap/AppDelegate.cs" Line="27" Column="105" />
+      <File FileName="iOSBaiduMap/CustomViewController.cs" Line="33" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.iOSBaiduMap PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.E5D34029-C611-4349-B30B-06CDC4D43098">
